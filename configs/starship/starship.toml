@@ -1,0 +1,79 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$fill\
+$cmd_duration\
+$jobs\
+$docker_context\
+$line_break\
+$python\
+$character\
+"""
+
+add_newline = false
+
+[directory]
+format = "[$path]($style) "
+style = "blue"
+truncate_to_repo = false
+truncation_length = 6
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_state]
+format = "\\([$state( $progress_current/$progress_total)]($style)\\) "
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = " "
+untracked = " "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
+stashed = "≡"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+min_time = 5_000
+
+[jobs]
+format = "[$symbol]($style) "
+style = "bright-red"
+symbol = "✦ "
+number_threshold = 1
+
+[docker_context]
+format = "[$symbol$path]($style) "
+style = "bright-black"
+symbol = " "
+detect_extensions = ["Dockerfile"]
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+
+[os]
+format = "[\\($name\\)]($style)"
+style = "bright-black"
+disabled = false
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+symbol = " "
+
+[character]
+success_symbol = "[»](bold green)"
+error_symbol = "[»](bold red)"
+vimcmd_symbol = "[»](bold green)"
