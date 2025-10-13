@@ -7,7 +7,7 @@ alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 
 # Sort directories in top, colors, and print "/" at directories, and human-readable size.
-alias ls="ls -lhF --group-directories-first"
+alias ls="ls -lhF --group-directories-first --color"
 
 # Use syntax hightlight for bat (required bat package).
 alias cat="bat --paging never --decorations never --plain"
