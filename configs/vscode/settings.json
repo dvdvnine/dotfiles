@@ -1,0 +1,319 @@
+{
+  // ---- Permissions:
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "telemetry.telemetryLevel": "off", // conficts with Codeium extension.
+  "redhat.telemetry.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
+
+  // - General
+  "window.zoomLevel": 1,
+  "window.title": "${rootName}${separator}${profileName}",
+  "window.titleSeparator": " — ",
+  "window.newWindowDimensions": "inherit",
+  "window.enableMenuBarMnemonics": false,
+  "workbench.startupEditor": "none",
+  "workbench.panel.opensMaximized": "always",
+  "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "right",
+  "debug.toolBarLocation": "commandCenter",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.console.closeOnEnd": true,
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.enableStickyScroll": false,
+  "explorer.compactFolders": false,
+  "editor.scrollbar.verticalScrollbarSize": 15,
+  "editor.mouseWheelScrollSensitivity": 2,
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false, // it is useful for JSON files.
+  "editor.scrollBeyondLastLine": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 119,
+  // "editor.bracketPairColorization.enabled": false,
+  "editor.matchBrackets": "never",
+  "editor.occurrencesHighlight": "off",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  // "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.gotoLocation.multipleReferences": "peek",
+  "editor.gotoLocation.multipleDefinitions": "peek",
+  "editor.gotoLocation.multipleDeclarations": "peek",
+  "editor.gotoLocation.multipleImplementations": "peek",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
+  // "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  // "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.smoothScrolling": true,
+
+  // - Hidden:
+  "window.menuBarVisibility": "hidden",
+  "window.commandCenter": false,
+  // "workbench.navigationControl.enabled": false,  // it is useful if the commandCenter is visible.
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.tips.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
+    "**/.DS_Store": true,
+    "**/.vscode": true,
+    "**/.venv": true,
+    "**/.cache": true,
+    "**/__pycache__": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+    "**/.pytest_cache": true
+  },
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.symbolPath": "off", // it is useful if the breadcrumbs are enabled.
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.guides.indentation": false,
+  "editor.colorDecorators": false,
+
+  // - Status decorations:
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.decorations.colors": false,
+  "explorer.decorations.badges": false, // if the file is selected -> the status color is reset.
+  // "explorer.decorations.colors": false,
+  "problems.decorations.enabled": false,
+
+  // - Cursors:
+  "editor.cursorSurroundingLines": 10,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderLineHighlight": "all",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorStyleInactive": "outline",
+  "terminal.integrated.cursorBlinking": false,
+
+  // - Fonts:
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "MonoLisa, Symbols Nerd Font",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 13.5,
+  "editor.lineHeight": 1.8,
+  "terminal.integrated.fontFamily": "MonoLisa, Symbols Nerd Font",
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontSize": 13.5,
+
+  // - Themes:
+  "workbench.colorTheme": "pustota",
+  "workbench.colorCustomizations": {
+    "[Darcula (IntelliJ)]": {
+      "editorGutter.background": "default",
+      "titleBar.activeBackground": "#252526",
+      "activityBar.background": "#252526",
+      "scrollbarSlider.background": "#333333",
+      "statusBar.background": "#252526",
+      "list.focusBackground": "#333333",
+      "editorInlayHint.background": "#333333"
+    },
+    "[pustota]": {
+      "list.focusOutline": "#e6b450",
+      "list.focusAndSelectionOutline": "#e6b450",
+      "list.focusForeground": "#b3b1adbf",
+      "list.activeSelectionForeground": "#b3b1adbf",
+      "list.inactiveSelectionForeground": "#b3b1adbf"
+    }
+  },
+  "workbench.tree.indent": 16,
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+
+  // - Tabs:
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 1,
+  "workbench.editor.labelFormat": "short",
+
+  // - LSP:
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "fastapi",
+      "depth": 3,
+      "includeAllSymbols": true
+    }
+  ],
+  // "python.experiments.enabled": false,
+  // "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  // "python.createEnvironment.trigger": "off",
+  // "python.terminal.activateEnvironment": false,
+
+  // - Suggestions:
+  "editor.snippetSuggestions": "top", // snippets from the "IntelloSense"
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": false,
+    "other": true
+  },
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.lightbulb.enabled": "off",
+
+  // - Hints:
+  "editor.inlayHints.enabled": "off",
+  "editor.parameterHints.enabled": false,
+
+  // - Autocompletions:
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingOvertype": "never",
+  // "editor.autoSurround": "never",  // TODO: uncomfortable?
+  "editor.linkedEditing": true,
+  // "python.analysis.completeFunctionParens": true,
+  "html.autoClosingTags": true,
+
+  // - Git:
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 30,
+  "git.rebaseWhenSync": true,
+  "git.showInlineOpenFileAction": false,
+  "diffEditor.renderSideBySide": false,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+
+  // - Formatting:
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // - Formatters:
+  "editor.rulers": [119],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 119,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.rulers": [72, 99]
+  },
+  "[javascript]": {
+    "editor.rulers": [79],
+    "prettier.printWidth": 79
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+
+  // - Extension rules:
+  "black-formatter.args": ["--config", "pyproject.toml"],
+
+  "database-client.autoSync": true, // TODO: what's it???
+
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "liveSassCompile.settings.showOutputWindowOn": "None",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+
+  "cSpell.language": "en, en-GB, en-US, lorem, ru",
+  "cSpell.userWords": [
+    "aclick",
+    "adminer",
+    "aiometer",
+    "alacritty",
+    "amap",
+    "asyncclick",
+    "asyncio",
+    "autofetch",
+    "autoflush",
+    "bunkr",
+    "cffi",
+    "codeium",
+    "consolas",
+    "cyberdrop",
+    "darcula",
+    "donot",
+    "esbenp",
+    "excs",
+    "fastapi",
+    "fileserver",
+    "flac",
+    "gifv",
+    "hashsum",
+    "httpx",
+    "inocs",
+    "intelli",
+    "jetbrains",
+    "joinedload",
+    "Kanagawa",
+    "kdbx",
+    "levelname",
+    "lxml",
+    "mccabe",
+    "miniters",
+    "msecs",
+    "mult",
+    "orjson",
+    "parens",
+    "pbar",
+    "pgadmin",
+    "pixeldrain",
+    "popleft",
+    "promocode",
+    "pycache",
+    "pydantic",
+    "pyenv",
+    "pylance",
+    "pyproject",
+    "pyright",
+    "PYTHONPATH",
+    "redoc",
+    "referer",
+    "retryable",
+    "selectinload",
+    "sessionmaker",
+    "sqlalchemy",
+    "tamasfe",
+    "tmps",
+    "tqdm",
+    "treesticky",
+    "useragent",
+    "uvicorn",
+    "venv",
+    "vimcmd",
+    "virtualenv",
+    "webstorm",
+    "yarl"
+  ],
+
+  // - Test Zone:
+  "editor.smartSelect.selectSubwords": false,
+  "editor.semanticHighlighting.enabled": false
+  // "terminal.integrated.commandsToSkipShell": [],
+  // "remote.autoForwardPortsSource": "hybrid"
+  // "workbench.editorAssociations": {
+  //   "*.ipynb": "jupyter-notebook"
+  // }
+}
