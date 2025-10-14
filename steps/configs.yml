@@ -1,0 +1,22 @@
+- defautls:
+    create:
+      mode: 0755
+    link:
+      create: true
+      force: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.ssh/config: configs/ssh/config
+    ~/.gitconfig: configs/git/gitconfig
+    ~/.gitattributes_global: configs/git/gitattributes_global
+    ~/.zshrc: configs/zsh/zshrc
+    ~/.shell/: configs/shell
+    ~/.nanorc: configs/nano/nanorc
+    ~/.config/starship/starship.toml: configs/starship/starship.toml
+    ~/.config/kitty/kitty.conf: configs/kitty/kitty.conf
+    ~/.config/ghostty/config: configs/ghostty/config
+    ~/.config/kanata/config.kbd: configs/kanata/config.kbd
+    ~/.config/Code/User/settings.json: configs/vscode/settings.json
+    ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json
