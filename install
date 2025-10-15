@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
+# This script executes dotbot scenarios described in the config files.
 
-set -e
+set -euo pipefail
 
-export SHELL="/bin/bash"
-
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOTBOT_DIR="dotbot"
-DOTBOT_BIN="bin/dotbot"
-
-ARGS="$@"
-
-cd "${BASEDIR}"
-git submodule sync --quiet --recursive
-git submodule update --init --recursive
-
+readonly BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly DOTBOT_DIR="dotbot"
+readonly DOTBOT_BIN="bin/dotbot"
+readonly ARGS=("$@")
 
 run_dotbot() {
     local config
     config="$1"
 
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
-    -d "$BASEDIR" \
-    -c "$config" $ARGS
+    -d "${BASEDIR}" \
+    -c "${config}" "${ARGS[@]}"
 }
+
+main() {
+  cd "${BASEDIR}"
+  git submodule sync --quiet --recursive
+  git submodule update --init --recursive
+}
+
+
+main
