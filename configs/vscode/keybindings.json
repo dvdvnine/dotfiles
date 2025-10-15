@@ -94,7 +94,7 @@
   {
     "key": "ctrl+shift+t",
     "command": "workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    "when": "terminalFocus && terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
   {
     "key": "ctrl+shift+w",
@@ -736,10 +736,6 @@
     "key": "ctrl+shift+alt+i",
     "command": "-workbench.action.chat.openagent",
     "when": "config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
-  },
-  {
-    "key": "ctrl+a",
-    "command": "-editor.action.selectAll"
   },
   {
     "key": "ctrl+w",
