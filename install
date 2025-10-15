@@ -8,6 +8,21 @@ readonly DOTBOT_DIR="dotbot"
 readonly DOTBOT_BIN="bin/dotbot"
 readonly ARGS=("$@")
 
+ask() {
+  local question
+  local response
+  question="$1"
+  read -r -p "${question} (y/N): " response
+
+  case "$(echo "${response}" | tr '[:upper:]' '[:lower:]')" in
+    y | yes | true | 1)
+      return 0
+      ;;
+    *)
+      return 1
+  esac
+}
+
 run_dotbot() {
     local config
     config="$1"
