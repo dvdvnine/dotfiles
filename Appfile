@@ -1,0 +1,68 @@
+# Build automation tool:
+dnf make
+# GNU compiler collection:
+dnf gcc
+# Core plugins for DNF:
+dnf dnf-plugins-core
+# Auto-rebuild kernel modules on updates:
+dnf dkms
+# Isolated installer for Python CLI apps:
+dnf pipx
+# UNIX shell (command interpreter):
+dnf zsh
+# X11 clipboard CLI:
+dnf xclip
+# Clone of "cat" with syntax highlighting and Git integration:
+dnf bat
+# Modern CLI resource monitor:
+dnf btop
+# System info fetch (like neofetch but in C):
+dnf fastfetch
+# System restore snapshots:
+dnf timeshift
+# TUI for Git:
+dnf lazygit
+# Modern GPU-accelerated terminal emulator:
+dnf ghostty
+# Open-source code editor:
+dnf code
+# Control PC fans/cooling curves:
+dnf coolercontrol
+# Extra GNOME settings:
+dnf gnome-tweaks
+# Password manager:
+flatpak org.keepassxc.KeePassXC
+# Manager GNOME extensions:
+flatpak com.mattjakeman.ExtensionManager
+# Messaging app:
+flatpak org.telegram.desktop
+# Voice and text chat software:
+flatpak com.discordapp.Discord
+# Markdown-based note-taking:
+flatpak md.obsidian.Obsidian
+# Firefox-based Web browser:
+flatpak app.zen_browser.zen
+# Lightweight BitTorrent client:
+flatpak com.transmissionbt.Transmission
+# Image editor (like Paint):
+flatpak be.alexandervanhee.gradia
+# Run Windows software via Wine containers:
+flatpak com.usebottles.bottles
+# GNOME videos player:
+flatpak org.gnome.Totem
+# Simple music player:
+flatpak io.bassi.Amberol
+# GUI frontend for the yt-dlp:
+flatpak org.nickvision.tubeconverter
+# Media converter:
+flatpak io.gitlab.adhami3310.Converter
+# Open-source office suite:
+flatpak org.onlyoffice.desktopeditors
+# Lossless video/audio cutter:
+flatpak no.mifi.losslesscut
+# Flatpak permissions manager GUI:
+flatpak com.github.tchx84.Flatseal
+# Flatpak package manager with GUI:
+flatpak io.github.flattool.Warehouse
+# System monitor (like Windows Task Manager):
+flatpak io.missioncenter.MissionCenter
