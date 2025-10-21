@@ -1,0 +1,44 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: |
+        sudo dnf copr enable codifryed/CoolerControl; \
+        sudo dnf copr enable dejan/lazygit; \
+        sudo dnf copr enable scottames/ghostty
+      description: "Enable required COPR repositories:"
+
+    - command: |
+        sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc; \
+        echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+      description: "Add Microsoft GPG key and VSCode repository:"
+
+    - command: |
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+      description: "Install oh-my-zsh:"
+    - command: |
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      description: "Clone zsh-autosuggestions plugin:"
+    - command: |
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      description: "Clone zsh-syntax-highlighting plugin:"
+
+    - command: |
+        curl -sS https://starship.rs/install.sh | sh -s -- -y
+      description: "Install starship prompt:"
+
+    # It is important to enable the repositories beforehand.
+    - command: |
+        grep "^ *dnf" Appfile | sed "s/^ *dnf *//" | xargs sudo dnf -y install
+      description: "Install packages listed in Appfile via dnf:"
+
+    # It is important to pre-install the packages.
+    - command: |
+        pipx install uv
+      description: "Install UV via pipx:"
+
+    - command: |
+        sudo systemctl enable --now coolercontrold
+      description: "Start coolercontrold daemon:"

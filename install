@@ -37,6 +37,10 @@ main() {
   git submodule sync --quiet --recursive
   git submodule update --init --recursive
 
+  if ask "Install packages?"; then
+    run_dotbot "steps/packages.yml"
+  fi
+
   if ask "Create symlinks to configurations?"; then
     run_dotbot "steps/configs.yml"
   fi
