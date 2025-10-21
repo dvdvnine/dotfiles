@@ -44,6 +44,10 @@ main() {
   if ask "Create symlinks to configurations?"; then
     run_dotbot "steps/configs.yml"
   fi
+
+  if ask "Install flatpak apps?"; then
+    run_dotbot "steps/flatpak.yml"
+  fi
 }
 
 

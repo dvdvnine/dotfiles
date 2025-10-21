@@ -1,0 +1,13 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: |
+        flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      description: "Add Flathub repository for current user:"
+
+    - command: |
+        grep "^ *flatpak" Appfile | sed "s/^ *flatpak *//" | xargs flatpak install -u --nointeractive flathub
+      description: "Install Flatpak apps from Appfile (via Flathub):"
