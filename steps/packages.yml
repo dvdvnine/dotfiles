@@ -15,6 +15,16 @@
         echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
       description: "Add Microsoft GPG key and VSCode repository:"
 
+    # It is important to enable the repositories beforehand.
+    - command: |
+        grep "^ *dnf" Appfile | sed "s/^ *dnf *//" | xargs sudo dnf -y install
+      description: "Install packages listed in Appfile via dnf:"
+
+    # It is important to pre-install the packages.
+    - command: |
+        pipx install uv
+      description: "Install UV via pipx:"
+
     - command: |
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
       description: "Install oh-my-zsh:"
@@ -28,16 +38,6 @@
     - command: |
         curl -sS https://starship.rs/install.sh | sh -s -- -y
       description: "Install starship prompt:"
-
-    # It is important to enable the repositories beforehand.
-    - command: |
-        grep "^ *dnf" Appfile | sed "s/^ *dnf *//" | xargs sudo dnf -y install
-      description: "Install packages listed in Appfile via dnf:"
-
-    # It is important to pre-install the packages.
-    - command: |
-        pipx install uv
-      description: "Install UV via pipx:"
 
     - command: |
         sudo systemctl enable --now coolercontrold
