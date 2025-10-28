@@ -1,0 +1,42 @@
+# Zephyr.
+mattmc3/zephyr path:plugins/color
+mattmc3/zephyr path:plugins/completion
+mattmc3/zephyr path:plugins/compstyle
+mattmc3/zephyr path:plugins/directory
+mattmc3/zephyr path:plugins/editor
+mattmc3/zephyr path:plugins/environment
+mattmc3/zephyr path:plugins/history
+mattmc3/zephyr path:plugins/utility
+
+# Suggestions for previously entered commands.
+zsh-users/zsh-autosuggestions kind:defer
+
+# Argument autocompletion.
+zsh-users/zsh-completions kind:defer
+
+# History search (like fish).
+zsh-users/zsh-history-substring-search
+
+# Syntax highlighting.
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# Quick navigation to the most frequently visited dir.
+ohmyzsh/ohmyzsh path:plugins/z
+
+# Simple extract archive file.
+ohmyzsh/ohmyzsh path:plugins/extract
+
+# Autoloads env vars from .env file when "cd" into project root.
+ohmyzsh/ohmyzsh path:plugins/dotenv
+
+# Add "sudo" to the current or previous command by pressing <Esc> twice.
+ohmyzsh/ohmyzsh path:plugins/sudo
+
+# Prompt.
+ohmyzsh/ohmyzsh path:plugins/starship
+
+# Notifies when a command has an alias.
+MichaelAquilina/zsh-you-should-use
+
+# Inserts a closing quote or bracket when typing an opening one.
+hlissner/zsh-autopair
