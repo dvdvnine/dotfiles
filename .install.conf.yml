@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.zshenv: config/zsh/zshenv
+    ~/.config/zsh/.zshrc: config/zsh/zshrc
+    ~/.config/zsh/.zsh_plugins.txt: config/zsh/zsh_plugins.txt
+    ~/.config/zsh/.zshrc.d/:
+      glob: true
+      path: config/zsh/zshrc.d/**
