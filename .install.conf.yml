@@ -12,13 +12,19 @@
         mode: 0700
 
 - link:
+    # Keyboard utils:
+    ~/.config/kanata/config.kbd: configs/kanata/config.kbd
+
+    # SSH:
     ~/.ssh/config:
       force: true
       path: configs/ssh/config
 
+    # Git:
     ~/.config/git/attributes: configs/git/attributes
     ~/.config/git/config: configs/git/config
 
+    # Shell:
     ~/.zshenv: configs/zsh/zshenv
     ~/.config/zsh/.zshrc: configs/zsh/zshrc
     ~/.config/zsh/.zsh_plugins.txt: configs/zsh/zsh_plugins.txt
@@ -26,15 +32,19 @@
       glob: true
       path: configs/zsh/zshrc.d/**
 
+    # Prompt:
+    ~/.config/starship/config.toml: configs/starship/config.toml
+
+    # Emulators:
+    ~/.config/kitty/kitty.conf: configs/kitty/kitty.conf
+    ~/.config/ghostty/config: configs/ghostty/config
+
+    # Editors:
+    ~/.config/nano/nanorc: configs/nano/nanorc
+
     ~/.config/vim/:
       glob: true
       path: configs/vim/**
-
-    ~/.config/nano/nanorc: configs/nano/nanorc
-    ~/.config/starship/config.toml: configs/starship/config.toml
-    ~/.config/kanata/config.kbd: configs/kanata/config.kbd
-    ~/.config/kitty/kitty.conf: configs/kitty/kitty.conf
-    ~/.config/ghostty/config: configs/ghostty/config
 
     ~/.config/Code/User/settings.json: configs/vscode/settings.json
     ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json
