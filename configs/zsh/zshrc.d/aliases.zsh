@@ -1,3 +1,8 @@
+# Create a dir and cd into it.
+mkcd() {
+  mkdir "${1}" && cd "${1}"
+}
+
 # Find the dir.
 alias fd="find . -type d -name"
 
