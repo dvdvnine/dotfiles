@@ -26,6 +26,10 @@
       glob: true
       path: configs/zsh/zshrc.d/**
 
+    ~/.config/vim/:
+      glob: true
+      path: configs/vim/**
+
     ~/.config/nano/nanorc: configs/nano/nanorc
     ~/.config/starship/config.toml: configs/starship/config.toml
     ~/.config/kanata/config.kbd: configs/kanata/config.kbd
