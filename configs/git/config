@@ -1,0 +1,37 @@
+[user]
+  useConfigOnly = true
+
+[core]
+  attributesFile = ~/.config/git/attributes
+  autocrlf = input
+  safecrlf = warn
+
+[init]
+  defaultBranch = main
+
+[submodule]
+  recurse = true
+  fetchJobs = 0
+
+[push]
+  default = simple
+  rebase = false
+
+# Prune branches\tags that no longer exist remote.
+[fetch]
+  prune = true
+  pruneTags = true
+
+[diff]
+  indentHeuristic = on
+  noprefix = true
+  colorMoved = default
+
+[diff "nodiff"]
+  command = true
+
+[diff "generated"]
+  binary = true
+
+[include]
+  path = ~/.config/git/config_private

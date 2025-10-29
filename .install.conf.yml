@@ -6,6 +6,9 @@
 - clean: ["~", "~/.config"]
 
 - link:
+    ~/.config/git/attributes: configs/git/attributes
+    ~/.config/git/config: configs/git/config
+
     ~/.zshenv: configs/zsh/zshenv
     ~/.config/zsh/.zshrc: configs/zsh/zshrc
     ~/.config/zsh/.zsh_plugins.txt: configs/zsh/zsh_plugins.txt
