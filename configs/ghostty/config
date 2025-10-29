@@ -1,0 +1,25 @@
+# shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+theme = dark:Ayu, light:Ayu Light
+
+font-size = 12
+font-family = MonoLisa
+font-style = Medium
+
+# cursor-style = block
+# cursor-style-blink = false
+
+window-height = 40
+window-width = 120
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+
+# gtk-titlebar = false
+
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+
