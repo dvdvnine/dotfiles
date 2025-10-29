@@ -25,3 +25,5 @@
     ~/.config/zsh/.zshrc.d/:
       glob: true
       path: configs/zsh/zshrc.d/**
+
+    ~/.config/starship/config.toml: configs/starship/config.toml
