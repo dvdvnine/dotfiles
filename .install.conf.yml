@@ -29,6 +29,7 @@
     ~/.config/nano/nanorc: configs/nano/nanorc
     ~/.config/starship/config.toml: configs/starship/config.toml
     ~/.config/kanata/config.kbd: configs/kanata/config.kbd
+    ~/.config/kitty/kitty.conf: configs/kitty/kitty.conf
     ~/.config/ghostty/config: configs/ghostty/config
 
     ~/.config/Code/User/settings.json: configs/vscode/settings.json
