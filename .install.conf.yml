@@ -1,11 +1,21 @@
 - defaults:
+    create:
+      mode: 0755
     link:
       create: true
       relink: true
 
 - clean: ["~", "~/.config"]
 
+- create:
+    ~/.ssh:
+        mode: 0700
+
 - link:
+    ~/.ssh/config:
+      force: true
+      path: configs/ssh/config
+
     ~/.config/git/attributes: configs/git/attributes
     ~/.config/git/config: configs/git/config
 
