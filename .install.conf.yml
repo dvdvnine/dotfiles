@@ -28,3 +28,6 @@
 
     ~/.config/starship/config.toml: configs/starship/config.toml
     ~/.config/kanata/config.kbd: configs/kanata/config.kbd
+
+    ~/.config/Code/User/settings.json: configs/vscode/settings.json
+    ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json
