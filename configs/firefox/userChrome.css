@@ -1,0 +1,21 @@
+/* Clean up the bookmark manager. */
+
+#BMB_viewBookmarksSidebar,
+#BMB_searchBookmarks,
+#BMB_bookmarksShowAllTop {
+  display: none !important;
+}
+
+#BMB_bookmarksToolbar,
+#BMB_unsortedBookmarks {
+  display: none !important;
+}
+
+
+#BMB_bookmarksShowAllTop + menuseparator {
+  display: none !important;
+}
+
+#BMB_mobileBookmarks[hidden]:not([hidden="false"]) + menuseparator {
+  display: none !important;
+}
