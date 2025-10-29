@@ -6,9 +6,9 @@
 - clean: ["~", "~/.config"]
 
 - link:
-    ~/.zshenv: config/zsh/zshenv
-    ~/.config/zsh/.zshrc: config/zsh/zshrc
-    ~/.config/zsh/.zsh_plugins.txt: config/zsh/zsh_plugins.txt
+    ~/.zshenv: configs/zsh/zshenv
+    ~/.config/zsh/.zshrc: configs/zsh/zshrc
+    ~/.config/zsh/.zsh_plugins.txt: configs/zsh/zsh_plugins.txt
     ~/.config/zsh/.zshrc.d/:
       glob: true
-      path: config/zsh/zshrc.d/**
+      path: configs/zsh/zshrc.d/**
