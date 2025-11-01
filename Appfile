@@ -1,0 +1,113 @@
+# Build automation tool:
+dnf make
+
+# GNU compiler collection:
+dnf gcc
+
+# Core plugins for DNF:
+dnf dnf-plugins-core
+
+# Auto-rebuild kernel modules on updates:
+dnf dkms
+
+# Isolated installer for Python CLI apps:
+dnf pipx
+
+# UNIX shell (command interpreter):
+dnf zsh
+
+# X11 clipboard CLI:
+dnf xclip
+
+# Clone of "cat" with syntax highlighting and Git integration:
+dnf bat
+
+# Just Vim:
+dnf vim-enhanced
+
+# GUI Vim (only x11 version has a clipboard):
+dnf vim-X11
+
+# Modern CLI resource monitor:
+dnf btop
+
+# System info fetch (like neofetch but in C):
+dnf fastfetch
+
+# System restore snapshots:
+dnf timeshift
+
+# Extra GNOME settings:
+dnf gnome-tweaks
+
+# Prompt:
+dnf starship
+
+# TUI for Git:
+dnf lazygit
+
+# Modern GPU-accelerated terminal emulator:
+dnf ghostty
+
+# Open-source code editor:
+dnf code
+
+# Control PC fans/cooling curves:
+dnf coolercontrol
+
+# Password manager:
+flatpak org.keepassxc.KeePassXC
+
+# Manager GNOME extensions:
+flatpak com.mattjakeman.ExtensionManager
+
+# System monitor (like Windows Task Manager):
+flatpak io.missioncenter.MissionCenter
+
+# Modern GNOME videos player:
+flatpak org.gnome.Showtime
+
+# Simple music player:
+flatpak io.bassi.Amberol
+
+# Open-source reader with support EPUB, MOBI, FB2, CBZ and PDF formats:
+flatpak com.github.johnfactotum.Foliate
+
+# Open-source office suite:
+flatpak org.onlyoffice.desktopeditors
+
+# Messaging app:
+flatpak org.telegram.desktop
+
+# Voice and text chat software:
+flatpak com.discordapp.Discord
+
+# Firefox-based Web browser:
+flatpak app.zen_browser.zen
+
+# Image editor (like Paint):
+flatpak be.alexandervanhee.gradia
+
+# Markdown-based note-taking:
+flatpak md.obsidian.Obsidian
+
+# Lightweight BitTorrent client:
+flatpak com.transmissionbt.Transmission
+
+# Run Windows software via Wine containers:
+flatpak com.usebottles.bottles
+
+# GUI frontend for the yt-dlp:
+flatpak org.nickvision.tubeconverter
+
+# Media converter:
+flatpak io.gitlab.adhami3310.Converter
+
+# Simple lossless cutter:
+flatpak org.gnome.gitlab.YaLTeR.VideoTrimmer
+
+# Flatpak permissions manager GUI:
+flatpak com.github.tchx84.Flatseal
+
+# Flatpak package manager with GUI:
+flatpak io.github.flattool.Warehouse
