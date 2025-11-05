@@ -1,4 +1,6 @@
 #!/bin/bash
+# Taken from:
+# https://github.com/jtroo/kanata/discussions/130#discussioncomment-12782201
 
 # ==============================================================================
 # Script to set up Kanata with a dedicated user and hardened systemd service

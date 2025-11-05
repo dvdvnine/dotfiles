@@ -1,4 +1,6 @@
 #!/bin/bash
+# Taken from:
+# https://github.com/jtroo/kanata/discussions/130#discussioncomment-12782201
 
 # ==============================================================================
 # Script to REMOVE the hardened Kanata setup created by setup-kanata-hardened.sh
