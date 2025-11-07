@@ -22,6 +22,9 @@ dnf xclip
 # Clone of "cat" with syntax highlighting and Git integration:
 dnf bat
 
+# Command-line fuzzy finder:
+dnf fzf
+
 # Just Vim:
 dnf vim-enhanced
 
