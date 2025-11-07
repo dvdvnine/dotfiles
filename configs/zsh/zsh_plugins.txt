@@ -47,6 +47,3 @@ zsh-users/zsh-completions path:src kind:fpath
 zsh-users/zsh-autosuggestions kind:defer
 # Super fast syntax highlighting.
 zdharma-continuum/fast-syntax-highlighting kind:defer
-
-# Quick navigation to the most frequently visited dir.
-ohmyzsh/ohmyzsh path:plugins/z

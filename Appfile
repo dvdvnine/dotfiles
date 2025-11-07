@@ -22,6 +22,9 @@ dnf xclip
 # Clone of "cat" with syntax highlighting and Git integration:
 dnf bat
 
+# Shell extension to navigate your filesystem faster:
+dnf zoxide
+
 # Command-line fuzzy finder:
 dnf fzf
 
