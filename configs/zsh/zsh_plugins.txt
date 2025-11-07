@@ -1,45 +1,52 @@
-# See https://github.com/getantidote/use-omz
+# Integration with OMZ.
 getantidote/use-omz
 
-# Zephyr.
+# Make terminal things more colorful.
 mattmc3/zephyr path:plugins/color
+# Load and initialize the built-in zsh completion system.
 mattmc3/zephyr path:plugins/completion
+# Load and initialize a completion style system.
 mattmc3/zephyr path:plugins/compstyle
+# Set options and aliases related to the dirstack and filesystem.
 mattmc3/zephyr path:plugins/directory
+# Override and fill in the gaps of the default keybinds.
 mattmc3/zephyr path:plugins/editor
+# Define common environment variables.
 mattmc3/zephyr path:plugins/environment
+# Load and initialize the built-in zsh history system.
 mattmc3/zephyr path:plugins/history
+# Common shell utilities, aimed at making cross platform work less painful.
 mattmc3/zephyr path:plugins/utility
 
-# Suggestions for previously entered commands.
+# Add <ctrl + o> shortcut to copy the current text in the command line.
+ohmyzsh/ohmyzsh path:plugins/copybuffer
+# Simple extract archive file.
+ohmyzsh/ohmyzsh path:plugins/extract
+# Add "sudo" to the current or previous command by pressing <Esc> twice.
+ohmyzsh/ohmyzsh path:plugins/sudo
+# Autoloads env vars from .env file when "cd" into project root.
+ohmyzsh/ohmyzsh path:plugins/dotenv
+# Enables fuzzy auto-completion and key bindings.
+ohmyzsh/ohmyzsh path:plugins/fzf
+# Initializes zoxide.
+ohmyzsh/ohmyzsh path:plugins/zoxide
+# Initializes starship prompt.
+ohmyzsh/ohmyzsh path:plugins/starship
+
+# Notifies when a command has an alias.
+hlissner/zsh-autopair
+# Inserts a closing quote or bracket when typing an opening one.
+MichaelAquilina/zsh-you-should-use
+
+# Replace default completion selection menu with fzf.
+Aloxaf/fzf-tab
+
+# Additional completion definitions.
+zsh-users/zsh-completions path:src kind:fpath
+# Fish-like autosuggestions.
 zsh-users/zsh-autosuggestions kind:defer
-
-# Argument autocompletion.
-zsh-users/zsh-completions kind:defer
-
-# History search (like fish).
-zsh-users/zsh-history-substring-search
-
-# Syntax highlighting.
+# Super fast syntax highlighting.
 zdharma-continuum/fast-syntax-highlighting kind:defer
 
 # Quick navigation to the most frequently visited dir.
 ohmyzsh/ohmyzsh path:plugins/z
-
-# Simple extract archive file.
-ohmyzsh/ohmyzsh path:plugins/extract
-
-# Autoloads env vars from .env file when "cd" into project root.
-ohmyzsh/ohmyzsh path:plugins/dotenv
-
-# Add "sudo" to the current or previous command by pressing <Esc> twice.
-ohmyzsh/ohmyzsh path:plugins/sudo
-
-# Prompt.
-ohmyzsh/ohmyzsh path:plugins/starship
-
-# Notifies when a command has an alias.
-MichaelAquilina/zsh-you-should-use
-
-# Inserts a closing quote or bracket when typing an opening one.
-hlissner/zsh-autopair
