@@ -1,3 +1,6 @@
+# See https://github.com/getantidote/use-omz
+getantidote/use-omz
+
 # Zephyr.
 mattmc3/zephyr path:plugins/color
 mattmc3/zephyr path:plugins/completion
