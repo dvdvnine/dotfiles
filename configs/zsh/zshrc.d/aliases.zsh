@@ -3,12 +3,6 @@ mkcd() {
   mkdir "${1}" && cd "${1}"
 }
 
-# Find the dir.
-alias fd="find . -type d -name"
-
-# Find the file.
-alias ff="find . -type f -name"
-
 # Sort dirs in top, colors, and print "/" at dirs and human-readable size.
 alias ls="ls -lhF --group-directories-first --color"
 

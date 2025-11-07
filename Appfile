@@ -22,6 +22,9 @@ dnf xclip
 # Clone of "cat" with syntax highlighting and Git integration:
 dnf bat
 
+# Simple, fast and user-friendly alternative to find:
+dnf fd-find
+
 # Shell extension to navigate your filesystem faster:
 dnf zoxide
 
