@@ -43,6 +43,13 @@ dnf btop
 # System info fetch (like neofetch but in C):
 dnf fastfetch
 
+# Core set of open-source tools for containerization:
+docker-ce
+docker-ce-cli
+containerd.io
+docker-buildx-plugin
+docker-compose-plugin
+
 # System restore snapshots:
 dnf timeshift
 
