@@ -75,6 +75,18 @@ Parse the [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) an
 grep "^ *dnf" Appfile | sed "s/^ *dnf *//" | xargs sudo dnf -y install
 ```
 
+Set the default shell to `zsh` and swith to it
+
+```bash
+chsh -s $(which zsh) && exec $_
+```
+
+Using [`antidote`](https://github.com/mattmc3/antidote) for plugin management
+
+```bash
+git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
+```
+
 Don't forget to enable the cooling management daemon
 
 ```bash
