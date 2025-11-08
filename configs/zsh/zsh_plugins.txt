@@ -22,8 +22,6 @@ mattmc3/zephyr path:plugins/utility
 ohmyzsh/ohmyzsh path:plugins/copybuffer
 # Simple extract archive file.
 ohmyzsh/ohmyzsh path:plugins/extract
-# Add "sudo" to the current or previous command by pressing <Esc> twice.
-ohmyzsh/ohmyzsh path:plugins/sudo
 # Autoloads env vars from .env file when "cd" into project root.
 ohmyzsh/ohmyzsh path:plugins/dotenv
 # Enables fuzzy auto-completion and key bindings.
