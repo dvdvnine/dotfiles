@@ -107,8 +107,8 @@ flatpak be.alexandervanhee.gradia
 # Markdown-based note-taking:
 flatpak md.obsidian.Obsidian
 
-# Lightweight BitTorrent client:
-flatpak com.transmissionbt.Transmission
+# Open-source BitTorrent client:
+flatpak org.qbittorrent.qBittorrent
 
 # Run Windows software via Wine containers:
 flatpak com.usebottles.bottles
