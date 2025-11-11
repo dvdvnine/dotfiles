@@ -36,36 +36,14 @@ ln -s ~/.dotfiles/firefox/userChrome.css /path/to/your/profile
 > [!IMPORTANT]
 > This is specific to `Fedora Linux`.
 
-First, enable third-party repositories.
-
-... for the prompt
+First, enable third-party repositories
 
 ```bash
-sudo dnf copr enable atim/starship
-```
-
-... for the terminal emulator
-
-```bash
-sudo dnf copr enable scottames/ghostty
-```
-
-... for a better `Git` interface
-
-```bash
-sudo dnf copr enable dejan/lazygit
-```
-
-... for a better `Docker` interface
-
-```bash
-sudo dnf copr enable atim/lazydocker
-```
-
-... for cooling management
-
-```bash
-sudo dnf copr enable codifryed/CoolerControl
+sudo dnf copr enable atim/starship # prompt.
+sudo dnf copr enable scottames/ghostty  # terminal emulator.
+sudo dnf copr enable dejan/lazygit  # better Git interface.
+sudo dnf copr enable atim/lazydocker  # better Docker interface.
+sudo dnf copr enable codifryed/CoolerControl  # cooling management.
 ```
 
 ... for `VSCode`, with is a special case – you need to [add the GPG key first, then the repo](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)
