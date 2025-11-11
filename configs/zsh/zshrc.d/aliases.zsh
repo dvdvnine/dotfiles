@@ -18,3 +18,9 @@ alias pubkey="cat ~/.ssh/id_ed25519.pub | pbcopy | echo ' -> Public key copied t
 
 # Quick open .zshrc.
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
+
+# Shortcut to lazygit.
+alias lzg="lazygit"
+
+# Shortcut to lazydocker.
+alias lzd="lazydocker"
