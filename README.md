@@ -71,7 +71,7 @@ Using [`antidote`](https://github.com/mattmc3/antidote) for plugin management
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
 ```
 
-Start [`Docker Engine`](https://docs.docker.com/engine/install/fedora/)
+Start `Docker Engine` (additionally: [to avoid running as `sudo`](https://docs.docker.com/engine/install/linux-postinstall))
 
 ```bash
 sudo systemctl enable --now docker
