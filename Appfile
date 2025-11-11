@@ -62,6 +62,9 @@ dnf starship
 # TUI for Git:
 dnf lazygit
 
+# TUI for Docker:
+dnf lazydocker
+
 # Modern GPU-accelerated terminal emulator:
 dnf ghostty
 

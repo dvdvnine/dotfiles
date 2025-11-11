@@ -56,6 +56,12 @@ sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable dejan/lazygit
 ```
 
+... for a better `Docker` interface
+
+```bash
+sudo dnf copr enable atim/lazydocker
+```
+
 ... for cooling management
 
 ```bash
