@@ -167,15 +167,17 @@ NoNewPrivileges=true
 PrivateTmp=true
 PrivateNetwork=true
 PrivateUsers=true
-#ProtectClock=true # Disabled as per original example notes
+# Disabled as per original example notes
+#ProtectClock=true
 ProtectHome=true
 ProtectHostname=true
 ProtectKernelTunables=true
 ProtectKernelModules=true
 ProtectKernelLogs=true
 ProtectSystem=strict
-ProtectControlGroups=true
-RestrictAddressFamilies=AF_UNIX # Allow only Unix sockets, deny others like network
+ProtectControlGroups=tru
+# Allow only Unix sockets, deny others like networke
+RestrictAddressFamilies=AF_UNIX
 RestrictNamespaces=true
 SystemCallArchitectures=native
 SystemCallErrorNumber=EPERM
