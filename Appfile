@@ -44,11 +44,11 @@ dnf btop
 dnf fastfetch
 
 # Core set of open-source tools for containerization:
-docker-ce
-docker-ce-cli
-containerd.io
-docker-buildx-plugin
-docker-compose-plugin
+dnf docker-ce
+dnf docker-ce-cli
+dnf containerd.io
+dnf docker-buildx-plugin
+dnf docker-compose-plugin
 
 # System restore snapshots:
 dnf timeshift
