@@ -23,9 +23,16 @@ Run
 ./install
 ```
 
-**Firefox (Zen)**
+**Firefox**
 
-Create a symlink in `chrome/` to `firefox/userChrome.css` in your Firefox profile (e.g. `~/.zen/03zuh031.Default (release)/chrome/`)
+Copy https://github.com/arkenfox/user.js (only the files `user.js`, `updater.sh` and `prefsCleaner.sh` are needed) along with [`user-overrides`](https://github.com/dvdvnine/dotfiles/blob/main/configs/firefox/user-overrides.js) from this repo into your Firefox profile (eg. `~/.mozilla/firefox/l5h7qp2e.default-release`).
+
+Then run
+```bash
+bash updater.sh
+```
+
+Create a symlink in `chrome/` to `firefox/userChrome.css` in your Firefox profile.
 
 ```bash
 ln -s ~/.dotfiles/firefox/userChrome.css /path/to/your/profile
