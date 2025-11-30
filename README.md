@@ -38,6 +38,19 @@ Create a symlink in `chrome/` to `firefox/userChrome.css` in your Firefox profil
 ln -s ~/.dotfiles/firefox/userChrome.css /path/to/your/profile
 ```
 
+Plugins
+- [uBlock Origins](https://addons.mozilla.org/firefox/addon/ublock-origin/)
+- [SponsorBlock](https://addons.mozilla.org/firefox/addon/sponsorblock/)
+- [Red Shield VPN](https://addons.mozilla.org/firefox/addon/red-shield-vpn/)
+- [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) (for [`voice-over translate from YandexBrowser`](https://github.com/ilyhalight/voice-over-translation) and [`telegram downloader`](https://github.com/Neet-Nestor/Telegram-Media-Downloader))
+- [TWP - Translate Web Pages](https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/) (default translator sucks – it doesn't translate mixed pages)
+- [Canvas Defender](https://addons.mozilla.org/firefox/addon/no-canvas-fingerprinting/)
+- [I still don't care about cookies](https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/)
+- [Allow Right-Click](https://addons.mozilla.org/firefox/addon/re-enable-right-click/)
+- [BetterTTV](https://addons.mozilla.org/firefox/addon/betterttv/)
+- [Video DownloadHelper](https://addons.mozilla.org/firefox/addon/video-downloadhelper/) (with [`CoApp`](https://github.com/aclap-dev/video-downloadhelper/wiki/CoApp-Installation))
+- [Video Downloader VeeVee](https://addons.mozilla.org/firefox/addon/video-downloader-veevee/) (alt extension to above)
+
 ### `RPM` packages
 
 > [!IMPORTANT]
