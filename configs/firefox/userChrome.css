@@ -11,11 +11,16 @@
   display: none !important;
 }
 
-
 #BMB_bookmarksShowAllTop + menuseparator {
   display: none !important;
 }
 
 #BMB_mobileBookmarks[hidden]:not([hidden="false"]) + menuseparator {
   display: none !important;
+}
+
+
+/* Fix of title length for tabs in "browser.tabs.groups.hoverPreview. */
+#tabgroup-panel-content {
+  max-width: 42em;
 }
