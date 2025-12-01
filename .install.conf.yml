@@ -38,6 +38,9 @@
     # Emulators:
     ~/.config/kitty/kitty.conf: configs/kitty/kitty.conf
     ~/.config/ghostty/config: configs/ghostty/config
+    ~/.config/ghostty/shaders/:
+      glob: true
+      path: configs/ghostty/shaders/**.glsl
 
     # Editors:
     ~/.config/nano/nanorc: configs/nano/nanorc
