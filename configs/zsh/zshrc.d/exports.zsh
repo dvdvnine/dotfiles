@@ -1,6 +1,6 @@
 # Editors:
-export EDITOR="$(which vim)"
-export VISUAL="$(which vim)"
+export EDITOR="$(which nvim)"
+export VISUAL="$(which nvim)"
 
 # Pagers:
 export PAGER='less'
