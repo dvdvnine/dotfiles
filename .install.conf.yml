@@ -9,7 +9,7 @@
 
 - create:
     ~/.ssh:
-        mode: 0700
+      mode: 0700
 
 - link:
     # Keyboard utils:
@@ -45,9 +45,13 @@
     # Editors:
     ~/.config/nano/nanorc: configs/nano/nanorc
 
-    ~/.config/vim/:
+    # ~/.config/vim/:
+    #   glob: true
+    #   path: configs/vim/**
+
+    ~/.config/nvim/:
       glob: true
-      path: configs/vim/**
+      path: configs/nvim/**
 
     ~/.config/Code/User/settings.json: configs/vscode/settings.json
     ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json

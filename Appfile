@@ -31,11 +31,8 @@ dnf zoxide
 # Command-line fuzzy finder:
 dnf fzf
 
-# Just Vim:
-dnf vim-enhanced
-
-# GUI Vim (only x11 version has a clipboard):
-dnf vim-X11
+# The best editor:
+dnf neovim
 
 # Modern CLI resource monitor:
 dnf btop
