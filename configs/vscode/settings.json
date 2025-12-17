@@ -63,7 +63,7 @@
     "**/__pycache__": true,
     "**/.ruff_cache": true,
     "**/.mypy_cache": true,
-    "**/.pytest_cache": true,
+    "**/.pytest_cache": true
   },
 
   // ** Git status decorations **
@@ -120,18 +120,18 @@
   // ** Fonts **
   "editor.fontLigatures": true,
   "editor.fontFamily": "MonoLisa, Symbols Nerd Font",
-  "editor.fontWeight": "500",
+  "editor.fontWeight": "400",
   "editor.fontSize": 13,
   "editor.lineHeight": 1.6,
   "terminal.integrated.fontFamily": "MonoLisa, Symbols Nerd Font",
-  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.lineHeight": 1.2,
 
   // ** Themes **
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "Islands Light",
-  "workbench.preferredDarkColorTheme": "pustota",
+  "workbench.preferredDarkColorTheme": "Islands Dark",
 
   "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
   "workbench.tree.indent": 16,
@@ -160,7 +160,7 @@
 
       // for consistency with the block above.
       "editorSuggestWidget.selectedBackground": "#113a5c",
-      "editorSuggestWidget.highlightForeground": "#2aaaff",
+      "editorSuggestWidget.highlightForeground": "#2aaaff"
     },
     "[pustota]": {
       // borders is back
@@ -191,8 +191,8 @@
       "list.focusAndSelectionOutline": "#e6b450",
       "list.activeSelectionBackground": "#1c2a42",
       "list.inactiveSelectionBackground": "#1c2a45",
-      "quickInputList.focusBackground": "#1c2a42",
-    },
+      "quickInputList.focusBackground": "#1c2a42"
+    }
   },
 
   // remove the italic font style for constants
@@ -202,21 +202,21 @@
         {
           "scope": ["constant.other", "variable.other.constant"],
           "settings": {
-            "fontStyle": "",
-          },
-        },
-      ],
+            "fontStyle": ""
+          }
+        }
+      ]
     },
     "[Islands Light]": {
       "textMateRules": [
         {
           "scope": ["constant.other", "variable.other.constant"],
           "settings": {
-            "fontStyle": "",
-          },
-        },
-      ],
-    },
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
   },
 
   // ** Git **
@@ -232,21 +232,21 @@
   "prettier.printWidth": 119,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.rulers": [71, 99],
+    "editor.rulers": [71, 99]
   },
   "[javascript]": {
     "prettier.printWidth": 79,
-    "editor.rulers": [79],
+    "editor.rulers": [79]
   },
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
-    "editor.rulers": [99],
+    "editor.rulers": [99]
   },
   "[lua]": {
-    "editor.defaultFormatter": "sumneko.lua",
+    "editor.defaultFormatter": "sumneko.lua"
   },
 
   // ** LSP **
@@ -263,13 +263,13 @@
     {
       "name": "fastapi",
       "depth": 3,
-      "includeAllSymbols": true,
-    },
+      "includeAllSymbols": true
+    }
   ],
 
   // ** Extensions **
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1,
+    "asvetliakov.vscode-neovim": 1
   },
 
   // project config have higher priority
@@ -283,8 +283,8 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "~/../css",
-    },
+      "savePath": "~/../css"
+    }
   ],
 
   "cSpell.language": "en,ru",
@@ -299,5 +299,5 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.semanticHighlighting.enabled": false,
 
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": false
 }
