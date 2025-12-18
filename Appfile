@@ -89,8 +89,8 @@ flatpak com.github.johnfactotum.Foliate
 # Messaging app:
 flatpak org.telegram.desktop
 
-# Voice and text chat software:
-flatpak com.discordapp.Discord
+# Alt "Discord" client built on the web version:
+flatpak dev.vencord.Vesktop
 
 # Image editor (like Paint):
 flatpak be.alexandervanhee.gradia
