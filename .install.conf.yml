@@ -53,5 +53,8 @@
       glob: true
       path: configs/nvim/**
 
-    ~/.config/Code/User/settings.json: configs/vscode/settings.json
-    ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json
+    # ~/.config/Code/User/settings.json: configs/vscode/settings.json
+    # ~/.config/Code/User/keybindings.json: configs/vscode/keybindings.json
+
+    ~/.config/zed/keymap.json: configs/zed/keymap.json
+    ~/.config/zed/settings.json: configs/zed/settings.json

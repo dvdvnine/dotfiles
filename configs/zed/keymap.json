@@ -1,0 +1,78 @@
+// Zed keymap
+// documentation: https://zed.dev/docs/key-bindings
+
+[
+  {
+    "context": "!Terminal",
+    "bindings": {
+      "ctrl-shift-w": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-t": "workspace::NewTerminal",
+    },
+  },
+  {
+    "context": "!Terminal && (!Editor || (Editor && vim_mode == normal && !menu))",
+    "bindings": {
+      // there's an issue with ExtensionsPanel, OutputPanel, SearchPanel - they don't have `vim_mode`
+      "space": null,
+
+      "escape": "workspace::CloseAllDocks",
+      "space e": "project_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space d": "debug_panel::ToggleFocus",
+      "space o": "outline_panel::ToggleFocus",
+      "space n": "notification_panel::ToggleFocus",
+      "space i": "agent::ToggleFocus",
+
+      "space m": "zed::Extensions",
+      "space s": "zed::OpenSettingsFile",
+      "space k": "zed::OpenKeymapFile",
+
+      "space f": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "extension == md && Editor && VimControl && !menu",
+    "bindings": {
+      "space v": "markdown::OpenPreviewToTheSide",
+    },
+  },
+  {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      // crutch for deleting after insertion into the black hole instead of the clipboard.
+      "ctrl-alt-shift-super d": "vim::VisualDelete",
+      "p": ["workspace::SendKeystrokes", "\" _ ctrl-alt-shift-super d P"],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "shift-enter": "editor::NewlineAbove",
+      "ctrl-enter": "editor::NewlineBelow",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == operator && vim_operator == y && !menu",
+    "bindings": {
+      "p": "workspace::CopyPath",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "y p": "workspace::CopyPath",
+    },
+  },
+]
