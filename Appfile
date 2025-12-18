@@ -31,7 +31,7 @@ dnf zoxide
 # Command-line fuzzy finder:
 dnf fzf
 
-# The best editor:
+# A modern implementation of the best model editor:
 dnf neovim
 
 # Modern CLI resource monitor:
@@ -77,9 +77,6 @@ flatpak org.keepassxc.KeePassXC
 # Manager GNOME extensions:
 flatpak com.mattjakeman.ExtensionManager
 
-# System monitor (like Windows Task Manager):
-flatpak io.missioncenter.MissionCenter
-
 # Modern GNOME videos player:
 flatpak org.gnome.Showtime
 
@@ -89,17 +86,11 @@ flatpak io.bassi.Amberol
 # Open-source reader with support EPUB, MOBI, FB2, CBZ and PDF formats:
 flatpak com.github.johnfactotum.Foliate
 
-# Open-source office suite:
-flatpak org.onlyoffice.desktopeditors
-
 # Messaging app:
 flatpak org.telegram.desktop
 
 # Voice and text chat software:
 flatpak com.discordapp.Discord
-
-# Firefox-based Web browser:
-flatpak app.zen_browser.zen
 
 # Image editor (like Paint):
 flatpak be.alexandervanhee.gradia
