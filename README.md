@@ -1,15 +1,17 @@
 # dotfiles
 
-I use [`Dotbot`](https://github.com/anishathalye/dotbot) to manage my dotfiles.
+What’s in here:
 
-Previusly, I also used it ot install `rmp` packages and `flatpak` apps through the [`shell`](https://github.com/anishathalye/dotbot?tab=readme-ov-file#shell) directive, but eventually gave up on this approach – it overly complicates the [configuration](https://github.com/dvdvnine/dotfiles/blob/main/.install.conf.yml) and doesn't seem like the right tool for the job.
+- Setting up up-to-date configs using [`Dotbot`](https://github.com/anishathalye/dotbot).
+- Installing apps.
+- Setting up software keyboard remapping using [`kanata`](https://github.com/jtroo/kanata).
 
 ## Installation
 
 ### Configs
 
 > [!NOTE]
-> When needed, I extend the current configs with local ones that I import, like `config_private` for `configs/git/config`.
+> When needed, I extend the current configs with local ones that I import (eg, `config_private` for `configs/git/config`).
 
 Clone this repo
 
@@ -20,25 +22,27 @@ git clone https://github.com/dvdvnine/dotfiles.git ~/.dotfiles && cd $_
 Run
 
 ```bash
-./install
+bash install
 ```
 
 **Firefox**
 
-Copy https://github.com/arkenfox/user.js (only the files `user.js`, `updater.sh` and `prefsCleaner.sh` are needed) along with [`user-overrides`](https://github.com/dvdvnine/dotfiles/blob/main/configs/firefox/user-overrides.js) from this repo into your Firefox profile (eg. `~/.mozilla/firefox/l5h7qp2e.default-release`).
+Copy `user.js`, `updater.sh`, and `prefsCleaner.sh` from https://github.com/arkenfox/user.js together with [`user-overrides.js`](https://github.com/dvdvnine/dotfiles/blob/main/configs/firefox/user-overrides.js) from this repo into your `Firefox` profile (e.g. `~/.mozilla/firefox/l5h7qp2e.default-release`).
 
-Then run
+Run
+
 ```bash
 bash updater.sh
 ```
 
-Create a symlink in `chrome/` to `firefox/userChrome.css` in your Firefox profile.
+Create a symlink in the `chrome/` folder to `configs/firefox/userChrome.css` in your `Firefox` profile
 
 ```bash
-ln -s ~/.dotfiles/firefox/userChrome.css /path/to/your/profile
+ln -s ~/.dotfiles/configs/firefox/userChrome.css /path/to/your/profile/chrome/
 ```
 
 Plugins
+
 - [uBlock Origins](https://addons.mozilla.org/firefox/addon/ublock-origin/)
 - [SponsorBlock](https://addons.mozilla.org/firefox/addon/sponsorblock/)
 - [Red Shield VPN](https://addons.mozilla.org/firefox/addon/red-shield-vpn/)
@@ -47,16 +51,16 @@ Plugins
 - [Canvas Defender](https://addons.mozilla.org/firefox/addon/no-canvas-fingerprinting/)
 - [I still don't care about cookies](https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/)
 - [Allow Right-Click](https://addons.mozilla.org/firefox/addon/re-enable-right-click/)
-- [BetterTTV](https://addons.mozilla.org/firefox/addon/betterttv/)
 - [Video DownloadHelper](https://addons.mozilla.org/firefox/addon/video-downloadhelper/) (with [`CoApp`](https://github.com/aclap-dev/video-downloadhelper/wiki/CoApp-Installation))
-- [Video Downloader VeeVee](https://addons.mozilla.org/firefox/addon/video-downloader-veevee/) (alt extension to above)
 
-### `RPM` packages
+### Apps
+
+#### `RPM`
 
 > [!IMPORTANT]
-> This is specific to `Fedora Linux`.
+> Relevant for `Fedora Linux`
 
-First, enable third-party repositories
+Enable external repositories
 
 ```bash
 sudo dnf copr enable atim/starship # prompt.
@@ -66,49 +70,64 @@ sudo dnf copr enable atim/lazydocker  # better Docker interface.
 sudo dnf copr enable codifryed/CoolerControl  # cooling management.
 ```
 
-... for `VSCode`, with is a special case – you need to [add the GPG key first, then the repo](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions)
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-```
-
-Parse the [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) and install `rmp` packages
+Parse `rpm` package names from [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) and install them
 
 ```bash
 grep "^ *dnf" Appfile | sed "s/^ *dnf *//" | xargs sudo dnf -y install
 ```
 
-Set the default shell to `zsh` and swith to it
+**Shell**
+
+Switch to the new shell
 
 ```bash
 chsh -s $(which zsh) && exec $_
 ```
 
-Using [`antidote`](https://github.com/mattmc3/antidote) for plugin management
+Clone [`antidote`](https://github.com/mattmc3/antidote) for plugin management
 
 ```bash
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
 ```
 
-Start `Docker Engine` (additionally: [to avoid running as `sudo`](https://docs.docker.com/engine/install/linux-postinstall))
+You’ll probably need to load the plugins manually (issue with the update date of the file containing the list)
+
+```bash
+antidote load
+```
+
+**Docker**
+
+Start `Docker Engine`
 
 ```bash
 sudo systemctl enable --now docker
 ```
 
-Don't forget to enable the cooling management daemon
+And so you don’t have to call it with `sudo` every time, you can follow the [post-installation guide](https://docs.docker.com/engine/install/linux-postinstall/).
+
+**Zed**
+
+[yolo](https://zed.dev/docs/linux)
+
+```bash
+curl -f https://zed.dev/install.sh | sh
+```
+
+**CoolerControl**
+
+Start
 
 ```bash
 sudo systemctl enable --now coolercontrold
 ```
 
-### `Flatpak` apps
+#### `Flatpak`
 
 > [!NOTE]
-> I prefer using apps from [`flathub`](https://flatpak.org/setup/Fedora) instead of the local repo – not sure why, but the latter just doesn't work as well.
+> I prefer apps from [`flathub`](https://flatpak.org/setup/Fedora) - they just work better than in my local repository.
 
-Parse [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) again and install apps **from `flathub` for the current user**
+Parse `flatpak` app names from [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) and install them for the user.
 
 ```bash
 grep "^ *flatpak" Appfile | sed "s/^ *flatpak *//" | xargs flatpak install -u --noninteractive flathub
@@ -116,38 +135,25 @@ grep "^ *flatpak" Appfile | sed "s/^ *flatpak *//" | xargs flatpak install -u --
 
 ### Additionally
 
-#### `Python` tools
-
-I prefer installing additional tools in virtual envs using [`pipx`](https://pipx.pypa.io/stable/)
-
-```bash
-pipx install uv
-```
-
 #### Keyboard
 
-For keyboard remapping, I use the cross-platform software remapper [`kanata`](https://github.com/jtroo/kanata), which works universally with any keyboard.
-
-> [!NOTE]
-> The `kanata` version and config path are specified inside the script.
-
-The script below performs several steps to install and configure `kanata` with a dedicated user and hardened `systemd` service for improved security.
+The script’s job is to install and set up `kanata` with a dedicated user and `systemd` hardening for extra security.
 
 Steps:
 
-- install `kanata`
-- copy your config to the system location `/etc/kanata/kanata-config.kbd`
-- create user\group
-- set rules
-- create\enable\start the `systemd` service
+1. Installs `kanata` (version and config file path are specified inside the script).
+2. Copies your config to the system location `/etc/kanata/kanata-config.kbd`.
+3. Creates a group/user.
+4. Installs rules.
+5. Creates/enables/starts a `systemd` service.
 
-Run
+Run and restart the session
 
 ```bash
 chmod +x scripts/setup-kanata-hardened.sh && sudo $_
 ```
 
-If you need to remove everything, use this second script
+If you need to remove it
 
 ```bash
 chmod +x scripts/remove-kanata.sh && sudo $_
