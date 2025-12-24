@@ -71,6 +71,9 @@ dnf code
 # Control PC fans/cooling curves:
 dnf coolercontrol
 
+# Cross-platform GUI proxy utility (formerly Nekoray):
+dnf throne
+
 # Password manager:
 flatpak org.keepassxc.KeePassXC
 

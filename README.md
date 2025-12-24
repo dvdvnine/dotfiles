@@ -68,6 +68,7 @@ sudo dnf copr enable scottames/ghostty  # terminal emulator.
 sudo dnf copr enable dejan/lazygit  # better Git interface.
 sudo dnf copr enable atim/lazydocker  # better Docker interface.
 sudo dnf copr enable codifryed/CoolerControl  # cooling management.
+sudo curl -o /etc/yum.repos.d/throne.repo https://parhelia512.github.io/throne.repo  # vpn client.
 ```
 
 Parse `rpm` package names from [`Appfile`](https://github.com/dvdvnine/dotfiles/blob/main/Appfile) and install them
