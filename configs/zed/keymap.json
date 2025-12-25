@@ -70,7 +70,7 @@
     },
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
       "y p": "workspace::CopyPath",
     },
