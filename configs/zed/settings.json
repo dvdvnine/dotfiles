@@ -5,6 +5,7 @@
   "vim_mode": true,
   "base_keymap": "VSCode",
   "soft_wrap": "editor_width",
+  "restore_on_startup": "none",
 
   // ** Appearance **
   "theme": {
