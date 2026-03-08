@@ -1,12 +1,11 @@
 #!/bin/bash
 # This script switches themes and wallpapers when the theme mode changes (for `darkman`).
-# REQUIRES: `darkman`, `awww`, `qt5ct` or `qt5ct-kde`, `qt6ct` or `qt6ct-kde`.
+# REQUIRES: `darkman`, `awww`, `qt6ct` or `qt6ct-kde`.
 
 set -euo pipefail
 
+readonly QT6_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/qt6ct/qt6ct.conf"
 readonly WALLPAPERS_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/backgrounds"
-readonly QT6_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/qt6/qt6.conf"
-readonly QT5_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/qt5/qt5.conf"
 
 
 set_gtk_theme() {
@@ -24,13 +23,9 @@ set_qt_theme() {
   local qt_scheme=$2
   local icons=$3
 
-  local config
-
-  for config in "$QT5_CONFIG" "$QT6_CONFIG"; do
-    sed -Ei "s|^(style[[:space:]]*=[[:space:]]*).*$|\1${qt_style}|" "$config"
-    sed -Ei "s|^(color_scheme_path[[:space:]]*=[[:space:]]*).*$|\1${qt_scheme}.colors|" "$config"
-    sed -Ei "s|^(icon_theme[[:space:]]*=[[:space:]]*).*$|\1${icons}|" "$config"
-  done
+  sed -Ei "s|^(style[[:space:]]*=[[:space:]]*).*$|\1${qt_style}|" "$QT6_CONFIG"
+  sed -Ei "s|^(color_scheme_path[[:space:]]*=[[:space:]]*).*$|\1${qt_scheme}.colors|" "$QT6_CONFIG"
+  sed -Ei "s|^(icon_theme[[:space:]]*=[[:space:]]*).*$|\1${icons}|" "$QT6_CONFIG"
 }
 
 set_wallpaper() {
@@ -63,6 +58,5 @@ main() {
       ;;
   esac
 }
-
 
 main "$@"
