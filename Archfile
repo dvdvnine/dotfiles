@@ -1,0 +1,113 @@
+# ----- Base:
+pacman neovim
+pacman terminus-font
+pacman stow
+pacman fish
+pacman bat
+pacman ripgrep
+pacman fd
+pacman tealdeer
+pacman eza
+pacman gdu
+pacman zoxide
+pacman fzf
+pacman starship
+
+
+# ----- Environment:
+pacman wl-clipboard
+pacman cliphist
+pacman flatpak
+pacman openbsd-netcat  # require to access `walker` via socker.
+pacman samba  # require for sharing with `quickemu` vm.
+
+pacman ly
+pacman uwsm
+aur soteria-git
+pacman waybar
+pacman mako
+pacman swayosd
+pacman grim
+pacman slurp
+pacman satty
+aur waycorner
+
+pacman walker
+aur elephant
+aur elephant-desktopapplications
+aur elephant-clipboard
+aur elephant-calc
+aur elephant-symbols
+aur elephant-menus
+
+pacman hyprland
+pacman xdg-desktop-portal
+pacman xdg-desktop-portal-hyprland
+pacman xdg-desktop-portal-gtk
+aur hyprshutdown
+aur hyprland-per-window-layout
+# pacman nwg-dock-hyprland
+
+pacman darkman
+aur awww
+pacman adwaita-fonts
+pacman adw-gtk-theme
+pacman adwaita-icon-theme
+pacman papirus-icon-theme
+aur papirus-folders
+pacman breeze
+aur qt5ct-kde
+aur qt6ct-kde
+# pacman hyprland-plugin-hyprbars
+
+
+# ----- Pkgs:
+pacman ghostty
+pacman impala
+pacman bluetui
+pacman wiremix
+pacman btop
+pacman yazi
+pacman fastfetch
+
+pacman nautilus
+pacman sushi
+pacman loupe
+# documents
+pacman showtime
+pacman amberol
+pacman gnome-clocks
+pacman gnome-calculator
+pacman gnome-weather
+pacman quickemu
+
+# pacman github-cli
+# pacman mise
+# pacman python
+# pacman node
+# pacman pipx
+# pacman docker
+
+pacman solanum
+aur google-chrome
+aur ayugram-desktop
+aur vesktop
+aur throne
+aur coolercontrol
+
+
+# ----- Flatpak apps:
+# flatpak org.gnome.clocks
+# flatpak org.gnome.Calculator
+# flatpak org.gnome.Weather
+# flatpak org.gnome.Showtime
+# flatpak io.bassi.Amberol
+
+# flatpak org.telegram.desktop
+# flatpak com.discordapp.Discord
+flatpak md.obsidian.Obsidian
+flatpak org.qbittorrent.qBittorrent
+flatpak org.nicotine_plus.Nicotine
+flatpak com.usebottles.bottles
+flatpak org.keepassxc.KeePassXC
+flatpak org.gnome.gitlab.YaLTeR.VideoTrimmer
