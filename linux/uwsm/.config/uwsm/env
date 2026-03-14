@@ -1,17 +1,24 @@
+# Force all apps to use Wayland:
+export GDK_BACKEND="wayland,x11,*"
+export QT_QPA_PLATFORM="wayland;xcb"
+
+export OZONE_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+# There are sometimes issues with games (https://github.com/basecamp/omarchy/issues/2564)
+export SDL_VIDEODRIVER=wayland
+
+
+# Allow better support for screencase (Google Meet, Diskcord, etc):
+export GTK_USE_PORTAL=1
+export QT_USE_PORTAL=1
+
+
+# Cursor size:
 export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
 
+
+# Styling for Qt apps:
 export QT_QPA_PLATFORMTHEME=qt6ct
-
-# force all apps to use Wayland
-export GDK_BACKEND=wayland,x11,*
-export QT_QPA_PLTFORM=wayland,xcb
-
-export SDL_VIDEODRIVER=wayland
-export OZON_PLATFORM=wayland
-export ELECTRON_OZON_PLATFORM_HINT=wayland
-export MOZ_ENABLE_WAYLAND=1
-
-# allow better support for screencast (Google Meet, Discord, etc)
-export GTK_USE_PORTAL=1
-export QT_USE_PORTAL=1
