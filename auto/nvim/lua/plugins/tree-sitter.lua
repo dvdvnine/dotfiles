@@ -24,6 +24,7 @@ Config.now_if_args(function()
     "lua",
     "vimdoc",
     "yaml",
+    "toml",
     "markdown",
   }
 

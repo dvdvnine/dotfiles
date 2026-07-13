@@ -6,6 +6,7 @@ Config.now_if_args(function()
   vim.lsp.enable({
     "lua_ls",
     "yamlls",
+    "taplo",
     "basedpyright",
   })
 end)
@@ -21,6 +22,7 @@ Config.later(function()
     -- Make sure that necessary CLI tool is available.
     formatters_by_ft = {
       lua = { "stylua" },
+      toml = { "taplo" },
       python = { "black" },
     },
   })
