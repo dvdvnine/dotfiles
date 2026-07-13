@@ -1,0 +1,14 @@
+config:
+  create: true
+  dotpath: auto
+
+dotfiles:
+  nvim:
+    src: nvim
+    dst: ~/.config/nvim
+    link: link_children
+
+profiles:
+  base:
+    dotfiles:
+      - nvim
