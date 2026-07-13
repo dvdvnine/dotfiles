@@ -5,6 +5,7 @@ Config.now_if_args(function()
 
   vim.lsp.enable({
     "lua_ls",
+    "yamlls",
     "basedpyright",
   })
 end)

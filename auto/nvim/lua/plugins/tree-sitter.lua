@@ -23,6 +23,7 @@ Config.now_if_args(function()
   local languages = {
     "lua",
     "vimdoc",
+    "yaml",
     "markdown",
   }
 
