@@ -142,7 +142,7 @@ nmap_leader("mt", "<Cmd>lua MiniMap.toggle()<CR>", "Toggle")
 -- SECTION: 'o' is for 'Other':
 
 nmap_leader("or", "<Cmd>lua MiniMisc.resize_window()<CR>", "Resize to default width")
-nmap_leader("ot", "<Cmd>lua MiniTrailspace.trim()<CR>", "Trim trailspace")
+nmap_leader("ol", "<Cmd>lua MiniTrailspace.trim()<CR>", "Trim trailspace")
 nmap_leader("oz", "<Cmd>lua MiniMisc.zoom()<CR>", "Zoom toggle")
 
 -- SECTION: 's' is for 'Session':
