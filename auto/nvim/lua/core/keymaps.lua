@@ -141,9 +141,25 @@ nmap_leader("mt", "<Cmd>lua MiniMap.toggle()<CR>", "Toggle")
 
 -- SECTION: 'o' is for 'Other':
 
+local translate_comment_to_russian = function()
+  vim.cmd("Translate RU -comment")
+end
+
+local translate_selection_to_russian = function()
+  vim.cmd("'<,'>Translate RU")
+end
+
+local translate_selection_to_english = function()
+  vim.cmd("'<,'>Translate EN -output=replace")
+end
+
 nmap_leader("or", "<Cmd>lua MiniMisc.resize_window()<CR>", "Resize to default width")
 nmap_leader("ol", "<Cmd>lua MiniTrailspace.trim()<CR>", "Trim trailspace")
+nmap_leader("ot", translate_comment_to_russian, "Translate to Russian")
 nmap_leader("oz", "<Cmd>lua MiniMisc.zoom()<CR>", "Zoom toggle")
+
+xmap_leader("ot", translate_selection_to_russian, "Translate to Russian")
+xmap_leader("oT", translate_selection_to_english, "Replate to English")
 
 -- SECTION: 's' is for 'Session':
 
