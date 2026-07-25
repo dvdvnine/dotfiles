@@ -12,5 +12,5 @@ git clone https://github.com/dvdvnine/dotfiles ~/.dotfiles
 
 Link dotfiles:
 ```bash
-dotdrop --profile default install
+dotdrop --profile base install
 ```
