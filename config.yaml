@@ -3,6 +3,11 @@ config:
   dotpath: auto
 
 dotfiles:
+  fish:
+    src: fish
+    dst: ~/.config/fish
+    link: link_children
+
   nvim:
     src: nvim
     dst: ~/.config/nvim
@@ -11,4 +16,5 @@ dotfiles:
 profiles:
   base:
     dotfiles:
+      - fish
       - nvim
