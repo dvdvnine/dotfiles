@@ -8,6 +8,11 @@ dotfiles:
     dst: ~/.config/fish
     link: link_children
 
+  starship:
+    src: starship
+    dst: ~/.config
+    link: link_children
+
   ghostty:
     src: ghostty
     dst: ~/.config/ghostty
@@ -22,5 +27,6 @@ profiles:
   base:
     dotfiles:
       - fish
+      - starship
       - ghostty
       - nvim
