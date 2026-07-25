@@ -5,6 +5,7 @@ Config.now_if_args(function()
 
   vim.lsp.enable({
     "lua_ls",
+    "fish_lsp",
     "yamlls",
     "taplo",
     "basedpyright",
@@ -22,6 +23,7 @@ Config.later(function()
     -- Make sure that necessary CLI tool is available.
     formatters_by_ft = {
       lua = { "stylua" },
+      fish = { "fish_indent" },
       toml = { "taplo" },
       python = { "black" },
     },
