@@ -1,0 +1,34 @@
+theme = dark:Ayu, light:Ayu Light
+
+font-size = 13
+font-family = MonoLisa, monospace, Symbols Nerd Font
+font-style = Medium
+
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+window-decoration = client
+unfocused-split-opacity = 0.5
+
+quit-after-last-window-closed = false
+mouse-hide-while-typing = true
+notify-on-command-finish = unfocused
+
+keybind = performable:ctrl+KeyC=copy_to_clipboard:mixed
+keybind = ctrl+KeyV=paste_from_clipboard
+
+keybind = PageUp=jump_to_prompt:-1
+keybind = PageDown=jump_to_prompt:1
+
+keybind = ctrl+shift+KeyO=new_split:right
+keybind = ctrl+shift+KeyE=new_split:down
+
+keybind = ctrl+shift+KeyH=goto_split:left
+keybind = ctrl+shift+KeyJ=goto_split:down
+keybind = ctrl+shift+KeyK=goto_split:up
+keybind = ctrl+shift+KeyL=goto_split:right
+
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+shift+down=goto_split:down
+keybind = ctrl+shift+up=goto_split:up
+keybind = ctrl+shift+right=goto_split:right
