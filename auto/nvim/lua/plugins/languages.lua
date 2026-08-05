@@ -4,6 +4,7 @@ Config.now_if_args(function()
   vim.pack.add({ "https://github.com/neovim/nvim-lspconfig" })
 
   vim.lsp.enable({
+    "bashls",
     "lua_ls",
     "fish_lsp",
     "yamlls",
@@ -22,6 +23,7 @@ Config.later(function()
 
     -- Make sure that necessary CLI tool is available.
     formatters_by_ft = {
+      sh = { "shfmt" },
       lua = { "stylua" },
       fish = { "fish_indent" },
       toml = { "taplo" },
