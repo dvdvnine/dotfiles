@@ -23,6 +23,11 @@ dotfiles:
     dst: ~/.config/nvim
     link: link_children
 
+
+  uwsm:
+    src: uwsm
+    dst: ~/.config/uwsm
+    link: link_children
 profiles:
   base:
     dotfiles:
