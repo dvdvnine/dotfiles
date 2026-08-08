@@ -81,7 +81,7 @@ vim.o.spelllang = "en_us,ru"
 vim.o.spelloptions = "camel" -- handle 'camelCase'
 
 vim.o.infercase = true -- infer case in built-in completion
-vim.o.complete = ".,w,b,kspell" -- use less source
+vim.o.complete = ".,w,b" -- use less source
 vim.o.completeopt = "menuone,noselect,fuzzy,nosort" -- use custom behavior
 vim.o.completetimeout = 100
 
