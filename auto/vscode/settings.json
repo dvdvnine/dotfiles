@@ -1,0 +1,303 @@
+{
+  // ** Permissions **
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "extensions.ignoreRecommendations": true,
+
+  // ** General **
+  "window.zoomLevel": 1,
+  "window.titleSeparator": " – ",
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "window.newWindowDimensions": "inherit",
+  "window.enableMenuBarMnemonics": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.layoutControl.type": "menu",
+  "workbench.sideBar.location": "right",
+  "workbench.tips.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.startupEditor": "terminal",
+  "workbench.editor.enablePreview": false,
+  "workbench.panel.opensMaximized": "always",
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.enableStickyScroll": false,
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.scrollbar.verticalScrollbarSize": 15,
+  "editor.scrollbar.horizontalScrollbarSize": 15,
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.scrollbar.horizontal": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 2,
+  "editor.stickyScroll.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.guides.indentation": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.matchBrackets": "never",
+  // "editor.bracketPairColorization.enabled": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+  "debug.toolBarLocation": "docked",
+  "chat.commandCenter.enabled": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.vscode": true,
+    "**/.idea": true,
+    "**/.venv": true,
+    "**/.cache": true,
+    "**/__pycache__": true,
+    "**/.ruff_cache": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true
+  },
+
+  // ** Git status decorations **
+  "workbench.editor.decorations.colors": false,
+  "workbench.editor.decorations.badges": true,
+  "explorer.decorations.colors": false, // if a row is selected, the selection get cleared
+  "explorer.decorations.badges": true,
+
+  // ** Tabs **
+  "workbench.editor.showTabs": "none",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 1,
+  "workbench.editor.labelFormat": "short",
+
+  // ** Formatting && saving **
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10,
+  "editor.formatOnSave": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+
+  // ** Hints **
+  // "editor.inlayHints.enabled": "off",
+  // "editor.parameterHints.enabled": false,
+
+  // ** Suggestions **
+  "editor.suggestSelection": "first",
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.acceptSuggestionOnCommitCharacter": false,
+  // "editor.quickSuggestions": {
+  //   "other": "off",
+  //   "comments": "off",
+  //   "strings": "off"
+  // },
+  // "editor.lightbulb.enabled": "off",
+  "editor.snippetSuggestions": "top",
+
+  // ** Autocomplete **
+  // "editor.autoClosingQuotes": "never",
+  // "editor.autoClosingBrackets": "never",
+  // "editor.autoClosingOvertype": "never",
+  // "editor.autoSurround": "never",
+  "editor.linkedEditing": true,
+
+  // ** Cursors **
+  "editor.renderLineHighlight": "all",
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "solid",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": false,
+
+  // ** Fonts **
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "MonoLisa, Symbols Nerd Font",
+  "editor.fontWeight": "400",
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.6,
+  "terminal.integrated.fontFamily": "MonoLisa, Symbols Nerd Font",
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1.2,
+
+  // ** Themes **
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Islands Light",
+  "workbench.preferredDarkColorTheme": "Islands Dark",
+
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.tree.indent": 16,
+
+  "workbench.colorCustomizations": {
+    // like the editor with distraction-free mode from JetBrains IDE.
+    // "editorGroup.border": "#00000000",
+    "scrollbar.shadow": "#00000000",
+
+    // disable indicators on the scrollbar
+    "editorOverviewRuler.infoForeground": "#00000000",
+    "editorOverviewRuler.warningForeground": "#00000000",
+    "editorOverviewRuler.errorForeground": "#00000000",
+
+    "[Darcula (IntelliJ)]": {
+      "editorGutter.background": "default",
+      "titleBar.border": "#2b2b2b",
+      "activityBar.border": "#2b2b2b",
+      "statusBar.border": "#2b2b2b",
+
+      // fix for the selected/hovered/active/inactive row in the project tree.
+      "focusBorder": "#2f65ca",
+      "list.focusAndSelectionOutline": "#2f65ca",
+      "list.activeSelectionBackground": "#113a5c",
+      "list.inactiveSelectionBackground": "#113a5c",
+
+      // for consistency with the block above.
+      "editorSuggestWidget.selectedBackground": "#113a5c",
+      "editorSuggestWidget.highlightForeground": "#2aaaff"
+    },
+    "[pustota]": {
+      // borders is back
+      "titleBar.border": "#181d29",
+      "activityBar.border": "#181d29",
+      "sideBar.border": "#181d29",
+      "sideBarSectionHeader.border": "#181d29",
+      "statusBar.border": "#181d29",
+      "editorGroup.border": "#181d29",
+      "editorSuggestWidget.border": "#181d29",
+      "editorHoverWidget.border": "#181d29",
+      "input.border": "#181d29",
+      "input.background": "#181d29",
+      "widget.border": "#181d29",
+      "widget.shadow": "#181d29",
+
+      // sidebar title is back
+      "sideBarTitle.foreground": "default",
+
+      // fir for the invisiable graph
+      "scmGraph.historyItemRefColor": "#e6b450",
+
+      // fix for the selected/active/inactive row.
+      "focusBorder": "#e6b450",
+      "list.focusForeground": "default",
+      "list.activeSelectionForeground": "#b3b1ad",
+      "list.inactiveSelectionForeground": "#b3b1ad",
+      "list.focusAndSelectionOutline": "#e6b450",
+      "list.activeSelectionBackground": "#1c2a42",
+      "list.inactiveSelectionBackground": "#1c2a45",
+      "quickInputList.focusBackground": "#1c2a42"
+    }
+  },
+
+  // remove the italic font style for constants
+  "editor.tokenColorCustomizations": {
+    "[Islands Dark]": {
+      "textMateRules": [
+        {
+          "scope": ["constant.other", "variable.other.constant"],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    },
+    "[Islands Light]": {
+      "textMateRules": [
+        {
+          "scope": ["constant.other", "variable.other.constant"],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  },
+
+  // ** Git **
+  "git.showInlineOpenFileAction": false,
+  "git.enableSmartCommit": false,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 30,
+  "git.rebaseWhenSync": true,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+
+  // ** Formatters **
+  "editor.defaultFormatter": "prettier.prettier-vscode",
+  "prettier.printWidth": 119,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.rulers": [71, 99]
+  },
+  "[javascript]": {
+    "prettier.printWidth": 79,
+    "editor.rulers": [79]
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.rulers": [99]
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+
+  // ** LSP **
+  "python.languageServer": "Pylance",
+  "python.experiments.enabled": false,
+  "python.createEnvironment.trigger": "off",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.inlayHints.variableTypes": false,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "fastapi",
+      "depth": 3,
+      "includeAllSymbols": true
+    }
+  ],
+
+  // ** Extensions **
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
+  // project config have higher priority
+  "black-formatter.args": ["--config", "pyproject.toml"],
+  "black-formatter.importStrategy": "fromEnvironment",
+
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "liveSassCompile.settings.showOutputWindowOn": "None",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+
+  "cSpell.language": "en,ru",
+
+  // ** States **
+  "workbench.activityBar.location": "default",
+
+  "editor.smartSelect.selectSubwords": false,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.semanticHighlighting.enabled": false,
+
+  "diffEditor.renderSideBySide": false
+}
