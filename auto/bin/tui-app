@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Launch a TUI app through UWSM with a predictable Wayland app-id.
+
+(( $# )) || {
+  echo "Usage: ${0##*/} <command> [args...]" >&2
+  exit 2
+}
+
+app="$1"
+shift
+
+exec uwsm-app -T "--app-id=local.${app}" -- "$app" "$@"
