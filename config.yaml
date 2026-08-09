@@ -34,6 +34,11 @@ dotfiles:
     dst: ~/.config/hypr
     link: link_children
 
+  noctalia:
+    src: noctalia
+    dst: ~/.config/noctalia
+    link: link_children
+
 profiles:
   base:
     dotfiles:
@@ -46,3 +51,4 @@ profiles:
     dotfiles:
       - uwsm
       - hypr
+      - noctalia
