@@ -23,6 +23,11 @@ dotfiles:
     dst: ~/.config/nvim
     link: link_children
 
+  f_set_mode:
+    src: bin/set-mode
+    dst: ~/.local/bin/set-mode
+    link: absolute
+
 
   uwsm:
     src: uwsm
@@ -49,6 +54,7 @@ profiles:
 
   hyprland:
     dotfiles:
+      - f_set_mode
       - uwsm
       - hypr
       - noctalia
