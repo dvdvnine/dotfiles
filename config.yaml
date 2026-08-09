@@ -68,6 +68,11 @@ dotfiles:
     dst: ~/.local/bin/tui-app
     link: absolute
 
+  fontconfig:
+    src: fontconfig
+    dst: ~/.config/fontconfig
+    link: link_children
+
   uwsm:
     src: uwsm
     dst: ~/.config/uwsm
@@ -107,6 +112,7 @@ profiles:
       - f_secure_sensitive
       - f_set_mode
       - f_tui_app
+      - fontconfig
       - uwsm
       - hypr
       - noctalia
