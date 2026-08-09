@@ -44,4 +44,5 @@ profiles:
 
   hyprland:
     dotfiles:
+      - uwsm
       - hypr
