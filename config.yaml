@@ -78,6 +78,11 @@ dotfiles:
     dst: ~/.config/hypr
     link: link_children
 
+  hyprlock:
+    src: hyprlock
+    dst: ~/.config/hypr
+    link: link_children
+
   noctalia:
     src: noctalia
     dst: ~/.config/noctalia
