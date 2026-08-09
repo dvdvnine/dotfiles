@@ -28,6 +28,12 @@ dotfiles:
     src: uwsm
     dst: ~/.config/uwsm
     link: link_children
+
+  hypr:
+    src: hypr
+    dst: ~/.config/hypr
+    link: link_children
+
 profiles:
   base:
     dotfiles:
@@ -35,3 +41,7 @@ profiles:
       - starship
       - ghostty
       - nvim
+
+  hyprland:
+    dotfiles:
+      - hypr
