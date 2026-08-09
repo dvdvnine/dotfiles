@@ -78,6 +78,11 @@ dotfiles:
     dst: ~/.config/uwsm
     link: link_children
 
+  waybar:
+    src: waybar
+    dst: ~/.config/waybar
+    link: link_children
+
   mako:
     src: mako
     dst: ~/.config/mako
