@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Recommended to have `QT_QPA_PLATFORMTHEME=gtk3`.
+
+main() {
+  local color_scheme
+  local gtk_theme
+  local icon_theme
+
+  case "${1:-}" in
+  dark)
+    color_scheme='prefer-dark'
+    gtk_theme='adw-gtk3-dark'
+    icon_theme='Papirus-Dark'
+    ;;
+  light)
+    color_scheme='prefer-light'
+    gtk_theme='adw-gtk3'
+    icon_theme='Papirus-Light'
+    ;;
+  *)
+    echo "Usage: ${0##*/} {light|dark}" >&2
+    return 2
+    ;;
+  esac
+
+  gsettings set org.gnome.desktop.interface color-scheme "${color_scheme}"
+  gsettings set org.gnome.desktop.interface gtk-theme "${gtk_theme}"
+  gsettings set org.gnome.desktop.interface icon-theme "${icon_theme}"
+}
+
+main "$@"
