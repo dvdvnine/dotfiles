@@ -3,6 +3,11 @@ config:
   dotpath: auto
 
 dotfiles:
+  git:
+    src: git
+    dst: ~/.config/git
+    link: link_children
+
   fish:
     src: fish
     dst: ~/.config/fish
@@ -61,6 +66,7 @@ dotfiles:
 profiles:
   base:
     dotfiles:
+      - git
       - fish
       - starship
       - ghostty
