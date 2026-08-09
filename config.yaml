@@ -43,6 +43,11 @@ dotfiles:
     dst: ~/.config/Code/User
     link: link_children
 
+  zed:
+    src: zed
+    dst: ~/.config/zed
+    link: link_children
+
   f_secure_sensitive:
     src: bin/secure-sensitive
     dst: ~/.local/bin/secure-sensitive
