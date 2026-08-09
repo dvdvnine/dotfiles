@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -uo pipefail
+
+pgrep -x keepassxc >/dev/null 2>&1 && keepassxc --lock >/dev/null 2>&1 || true
