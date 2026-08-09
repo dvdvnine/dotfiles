@@ -1,0 +1,26 @@
+[control_center]
+width = 920
+
+sidebar = "full"
+sidebar_section = "none"
+
+show_shortcut_labels = false
+
+[control_center.calendar]
+show_events_card = false
+show_week_numbers = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "audio"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "clipboard"

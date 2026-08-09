@@ -1,0 +1,4 @@
+[theme]
+mode = "auto"
+source = "custom"
+custom_palette = "deep-dark"

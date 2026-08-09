@@ -1,0 +1,18 @@
+[dock]
+enabled = true
+position = "right"
+
+launcher_icon = "terminal"
+launcher_position = "end"
+
+show_dots = true
+show_instance_count = false
+
+concave_edge_corners = false
+radius = 0
+
+item_spacing = 2
+margin_edge = 4
+
+inactive_opacity = 1
+background_opacity = 1

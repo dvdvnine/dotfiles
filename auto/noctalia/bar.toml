@@ -1,0 +1,74 @@
+[bar.default]
+start = ["workspaces"]
+center = []
+end = ["tray", "keyboard_layout", "privacy", "group:g1"]
+
+margin_ends = 0
+radius = 0
+capsule_radius = 0
+
+[[bar.default.capsule_group]]
+id = "g1"
+enabled = true
+
+members = ["battery", "volume", "bluetooth", "network", "date", "clock"]
+
+opacity = 0.0
+padding = 6.0
+radius = 0.0
+
+[widget.workspaces]
+display = "none"
+
+pill_scale = 0.5
+active_pill_size = 4.0
+capsule_radius = 12
+
+empty_color = "primary"
+occupied_color = "primary"
+
+[widget.tray]
+capsule = true
+capsule_opacity = 0.0
+
+[widget.keyboard_layout]
+show_icon = false
+
+capsule = true
+capsule_opacity = 0.0
+
+[widget.keyboard_layout.custom_labels]
+"English (US)" = "en"
+"Russian" = "ru"
+
+[widget.privacy]
+interactive = false
+hide_inactive = true
+
+capsule = true
+capsule_fill = "tertiary"
+icon_spacing = 6
+
+active_color = "on_tertiary"
+inactive_color = "on_tertiary"
+
+[widget.battery]
+interactive = false
+display_mode = "graphic"
+
+[widget.volume]
+interactive = false
+
+[widget.bluetooth]
+interactive = false
+
+[widget.network]
+interactive = false
+show_label = false
+
+[widget.date]
+interactive = false
+format = "{:%a, %d %b.}"
+
+[widget.clock]
+interactive = false

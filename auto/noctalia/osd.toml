@@ -1,0 +1,8 @@
+[osd]
+background_opacity = 1
+border = false
+
+[osd.kinds]
+media = false
+keyboard_layout = false
+keyboard_backlight = false

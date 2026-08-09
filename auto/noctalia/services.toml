@@ -1,0 +1,12 @@
+[audio]
+enable_sounds = true
+
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
+[notification]
+background_opacity = 1
+border = false
+show_actions = false
+show_app_name = false

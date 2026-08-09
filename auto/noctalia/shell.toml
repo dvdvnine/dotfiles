@@ -1,0 +1,66 @@
+[shell]
+corner_radius_scale = 0.0
+
+popup_borders = false
+card_borders = false
+input_borders = false
+button_borders = false
+
+polkit_agent = true
+password_style = "random"
+show_location = false
+
+[shell.panel]
+control_center_placement = "floating"
+session_placement = "floating"
+wallpaper_placement = "floating"
+
+open_near_click_control_center = true
+borders = false
+
+[shell.launcher]
+categories = false
+
+[shell.launcher.providers.calculator]
+global = true
+
+[shell.launcher.providers.session]
+global = true
+
+[shell.screenshot]
+save_to_file = false
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+shortcut = "1"
+variant = "ghost"
+countdown_seconds = 0.0
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+shortcut = "2"
+variant = "ghost"
+countdown_seconds = 2.0
+
+[[shell.session.actions]]
+action = "shutdown"
+enabled = true
+shortcut = "3"
+variant = "ghost"
+countdown_seconds = 5.0
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+enabled = true
+shortcut = "4"
+variant = "ghost"
+countdown_seconds = 0.0
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+shortcut = "5"
+variant = "ghost"
+countdown_seconds = 0.0
