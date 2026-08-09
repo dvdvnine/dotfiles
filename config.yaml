@@ -83,6 +83,11 @@ dotfiles:
     dst: ~/.config/hypr
     link: link_children
 
+  hyprtoolkit:
+    src: hyprtoolkit
+    dst: ~/.config/hypr
+    link: link_children
+
   noctalia:
     src: noctalia
     dst: ~/.config/noctalia
