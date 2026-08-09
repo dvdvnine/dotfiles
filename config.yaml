@@ -28,9 +28,19 @@ dotfiles:
     dst: ~/.config/kitty
     link: link_children
 
+  nano:
+    src: nano
+    dst: ~/.config/nano
+    link: link_children
+
   nvim:
     src: nvim
     dst: ~/.config/nvim
+    link: link_children
+
+  vscode:
+    src: vscode
+    dst: ~/.config/Code/User
     link: link_children
 
   f_secure_sensitive:
