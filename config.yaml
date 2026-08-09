@@ -33,6 +33,11 @@ dotfiles:
     dst: ~/.config/nano
     link: link_children
 
+  vim:
+    src: vim
+    dst: ~/.config/vim
+    link: link_children
+
   nvim:
     src: nvim
     dst: ~/.config/nvim
