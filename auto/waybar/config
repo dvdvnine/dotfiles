@@ -1,0 +1,96 @@
+{
+  "reload_style_on_change": true,
+
+  "layer": "top",
+  "position": "top",
+  "mode": "dock",
+  "exclusive": true,
+  "height": 42,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "custom/do-not-disturb",
+    "wireplumber#source",
+    "wireplumber#sink",
+    "bluetooth",
+    // "custom/bluetooth",
+    "network",
+    "clock",
+  ],
+
+  "hyprland/workspaces": {
+    "format": "<span size='5.5pt'>WORKSPACE</span>\n{icon}",
+    "format-icons": {
+      "default": "-",
+      "active": "<span color='#c9b03e'>here</span>",
+    },
+    "persistent-workspaces": {
+      "*": 3,
+    },
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "<span size='5.5pt'>TIMEDATE</span>\n{:%a %d %b, %R}",
+    "tooltip": false,
+    "on-click": "gnome-calendar",
+  },
+  "network": {
+    "format": "<span size='5.5pt'>NETWORK</span>\n{ifname}",
+    "format-disconnected": "<span color='#7f849c'><span size='5.5pt'>NETWORK</span>\n-</span>",
+    "tooltip": false,
+    "on-click": "tui-wrapper wlctl",
+  },
+  "bluetooth": {
+    "format": "<span size='5.5pt'>BLUETOOTH</span>\n{device_alias} {device_battery_percentage}%",
+    "format-on": "<span size='5.5pt'>BLUETOOTH</span>\n-",
+    "format-off": "<span color='#7f849c'><span size='5.5pt'>BLUETOOTH</span>\n-</span>",
+    "tooltip": false,
+    "on-click": "tui-wrapper bluetui",
+  },
+  // "custom/bluetooth": {
+  //   "exec": "${HOME_CONFIG_HOME:-$HOME/.config}/waybar/indicators/bluetooth.sh hci0",
+  //   "interval": 10,
+  //   "return-type": "json",
+  //   "format": "{text}",
+  //   "tooltip": false,
+  //   "on-click": "tui-wrapper bluetui",
+  // },
+  "wireplumber#sink": {
+    "format": "<span size='5.5pt'>VOLUME</span>\n{volume}%",
+    "format-muted": "<span size='5.5pt'>VOLUME</span><span color='#c9b03e'>\nmuted</span>",
+    "tooltip": false,
+    "on-click": "tui-wrapper wiremix --tab output",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 5,
+  },
+  "wireplumber#source": {
+    "node-type": "Audio/Source",
+    "format": "<span size='5.5pt'>MICROPHONE</span>\n{volume}%",
+    "format-muted": "<span size='5.5pt'>MICROPHONE</span><span color='#c9b03e'>\nmuted</span>",
+    "tooltip": false,
+    "on-click": "tui-wrapper wiremix --tab input",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "scroll-step": 5,
+  },
+  "custom/do-not-disturb": {
+    "exec": "${HOME_CONFIG_HOME:-$HOME/.config}/waybar/indicators/do-not-disturb.sh",
+    "signal": 10,
+    "return-type": "json",
+    "format": "<span size='5.5pt'>DO-NOT-DISTURB</span>\n{text}",
+    "tooltip": false,
+    "on-click": "dnd-toggle",
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "en",
+    "format-ru": "ru",
+    "tooltip": false,
+    "on-click": "hyprctl switchxkblayout current next >/dev/null 2>&1",
+  },
+  "tray": {
+    "icon-size": 14,
+  },
+}
