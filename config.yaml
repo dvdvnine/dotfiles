@@ -78,6 +78,11 @@ dotfiles:
     dst: ~/.config/uwsm
     link: link_children
 
+  mako:
+    src: mako
+    dst: ~/.config/mako
+    link: link_children
+
   hypr:
     src: hypr
     dst: ~/.config/hypr
