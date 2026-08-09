@@ -33,6 +33,10 @@ dotfiles:
     dst: ~/.local/bin/set-mode
     link: absolute
 
+  f_tui_app:
+    src: bin/tui-app
+    dst: ~/.local/bin/tui-app
+    link: absolute
 
   uwsm:
     src: uwsm
@@ -61,6 +65,7 @@ profiles:
     dotfiles:
       - f_secure_sensitive
       - f_set_mode
+      - f_tui_app
       - uwsm
       - hypr
       - noctalia
