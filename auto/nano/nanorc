@@ -1,0 +1,20 @@
+set minibar
+set linenumbers
+set indicator
+set constantshow
+set nohelp
+
+set tabstospaces
+set tabsize 4
+set autoindent
+
+set softwrap
+set atblanks
+
+set zap  # <backspace>/<delete> removes the selected text entirely
+set trimblanks
+
+include "/usr/share/nano/*.nanorc"
+
+unbind ^w main
+bind ^z undo main
