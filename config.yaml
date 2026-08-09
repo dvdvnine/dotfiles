@@ -23,6 +23,11 @@ dotfiles:
     dst: ~/.config/nvim
     link: link_children
 
+  f_secure_sensitive:
+    src: bin/secure-sensitive
+    dst: ~/.local/bin/secure-sensitive
+    link: absolute
+
   f_set_mode:
     src: bin/set-mode
     dst: ~/.local/bin/set-mode
@@ -54,6 +59,7 @@ profiles:
 
   hyprland:
     dotfiles:
+      - f_secure_sensitive
       - f_set_mode
       - uwsm
       - hypr
