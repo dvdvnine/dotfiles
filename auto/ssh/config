@@ -1,0 +1,12 @@
+Host *
+    SendEnv LANG LC_*
+
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
+
+    ForwardAgent yes
+    AddKeysToAgent yes
+    ServerAliveInterval 60
+
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
