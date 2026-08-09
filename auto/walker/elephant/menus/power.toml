@@ -1,0 +1,29 @@
+name = "power"
+name_pretty = "Power Menu"
+fixed_order = true
+hide_from_providerlist = true
+
+[[entries]]
+text = "Lock"
+icon = "system-lock-screen-symbolic"
+actions = { "lock" = "hypr-session lock" }
+
+[[entries]]
+text = "Reboot"
+icon = "system-reboot-symbolic"
+actions = { "reboot" = "hypr-session reboot" }
+
+[[entries]]
+text = "Shutdown"
+icon = "system-shutdown-symbolic"
+actions = { "shutdown" = "hypr-session shutdown" }
+
+[[entries]]
+text = "Suspend"
+icon = "system-suspend-symbolic"
+actions = { "suspend" = "hypr-session suspend" }
+
+[[entries]]
+text = "Logout"
+icon = "system-log-out-symbolic"
+actions = { "logout" = "hypr-session logout" }
