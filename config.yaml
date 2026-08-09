@@ -18,6 +18,11 @@ dotfiles:
     dst: ~/.config/ghostty
     link: link_children
 
+  kitty:
+    src: kitty
+    dst: ~/.config/kitty
+    link: link_children
+
   nvim:
     src: nvim
     dst: ~/.config/nvim
