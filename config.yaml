@@ -63,6 +63,11 @@ dotfiles:
     dst: ~/.local/bin/set-mode
     link: absolute
 
+  f_set_wallpaper:
+    src: bin/set-wallpaper
+    dst: ~/.local/bin/set-wallpaper
+    link: absolute
+
   f_tui_app:
     src: bin/tui-app
     dst: ~/.local/bin/tui-app
