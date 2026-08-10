@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# Close all open windows.
+
+cmds="$(
+  hyprctl clients -j |
+    jq -r '[.[] | "dispatch closewindow address:\(.address)"] | join(";")'
+)"
+
+if [[ -n "${cmds}" ]]; then
+  hyprctl --batch "${cmds}"
+fi
+
+hyprctl dispatch workspace 1
