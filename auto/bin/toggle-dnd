@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Toggle "do-not-disturb" mode in 'mako'.
+
+readonly MODENAME="do-not-disturb"
+
+makoctl mode -t "${MODENAME}" &>/dev/null
+
+if makoctl mode | grep -Fxq "${MODENAME}"; then
+  notify-send \
+    -u low \
+    -i notification-disabled \
+    "Silenced notifications"
+else
+  notify-send \
+    -u low \
+    -i preferences-desktop-notification-bell \
+    "Enabled notifications"
+fi
+
+# The 'waybar' module listens for SIGRTMIN+10 to refresh the DND indicator.
+pkill -RTMIN+10 waybar || true
