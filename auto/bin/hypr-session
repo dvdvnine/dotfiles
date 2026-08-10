@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Gracefully end a 'Hyprland' session.
+
+run_end_action() {
+  local action="$1"
+  local cmd
+
+  case "$action" in
+  shutdown) cmd="systemctl poweroff" ;;
+  reboot) cmd="systemctl reboot" ;;
+  logout) cmd="uwsm stop" ;;
+  *) return 2 ;;
+  esac
+
+  if command -v hyprshutdown &>/dev/null; then
+    hyprshutdown \
+      --top-label "${action^} 🗿" \
+      --post-cmd "$cmd"
+    return
+  fi
+
+  # Fallback: close all open windows first.
+  hypr-close-windows || true
+  sleep 1
+
+  bash -c "$cmd"
+}
+
+main() {
+  case "${1:-}" in
+  shutdown | reboot | logout)
+    run_end_action "$1"
+    ;;
+  suspend)
+    systemctl suspend
+    ;;
+  lock)
+    hypr-lock-screen
+    ;;
+  *)
+    printf 'Usage: %s {shutdown|reboot|logout|suspend|lock}\n' "${0##*/}" >&2
+    return 2
+    ;;
+  esac
+}
+
+main "$@"
