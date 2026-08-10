@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Desktop wallpaper setter wrapper.
+
+(($# == 1)) || {
+  printf 'Usage: %s <image_file>\n' "${0##*/}" >&2
+  exit 2
+}
+
+awww img \
+  "$1" \
+  --transition-type wipe \
+  --transition-angle 30 \
+  --transition-step 90
