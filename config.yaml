@@ -68,6 +68,11 @@ dotfiles:
     dst: ~/.local/bin/tui-app
     link: absolute
 
+  f_toggle_dnd:
+    src: bin/toggle-dnd
+    dst: ~/.local/bin/toggle-dnd
+    link: absolute
+
   fontconfig:
     src: fontconfig
     dst: ~/.config/fontconfig
