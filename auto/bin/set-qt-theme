@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# NOTE: this script assumes that the Qt6 config file already exists and contains the keys modified below.
+
+readonly SCRIPTNAME="${0##*/}"
+readonly QT6_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/qt6ct/qt6ct.conf"
+
+usage() {
+  cat <<EOF
+Usage:
+  ${SCRIPTNAME} <style> <color-scheme-path> <icon-theme>
+  ${SCRIPTNAME} -h|--help
+
+Set Qt6 application style, color scheme, and icon theme.
+
+Arguments:
+  <style>                 Qt style name.
+  <color-scheme-path>     Path to the Qt color scheme file.
+  <icon-theme>            Icon theme name.
+
+Examples:
+  ${SCRIPTNAME} Breeze /usr/share/color-schemes/BreezeDark.colors Papirus-Dark
+  ${SCRIPTNAME} Breeze /usr/share/color-schemes/BreezeLight.colors Papirus-Light
+EOF
+}
+
+main() {
+  if (($# == 1)); then
+    case "$1" in
+    -h | --help)
+      usage
+      return 0
+      ;;
+    esac
+  fi
+
+  if (($# != 3)); then
+    usage >&2
+    return 2
+  fi
+
+  local style="$1"
+  local color_scheme_path="$2"
+  local icon_theme="$3"
+
+  if [[ ! -f "$QT6_CONFIG" ]]; then
+    printf 'Error: Qt6 config file not found: %s\n' "$QT6_CONFIG" >&2
+    return 1
+  fi
+
+  sed -Ei \
+    -e "s|^(style[[:space:]]*=[[:space:]]*).*$|\1${style}|" \
+    -e "s|^(color_scheme_path[[:space:]]*=[[:space:]]*).*$|\1${color_scheme_path}|" \
+    -e "s|^(icon_theme[[:space:]]*=[[:space:]]*).*$|\1${icon_theme}|" \
+    "$QT6_CONFIG"
+}
+
+main "$@"
