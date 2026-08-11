@@ -1,0 +1,27 @@
+# getantidote/use-omz
+
+# Additional completion definitions must be in `$fpath` before compinit.
+zsh-users/zsh-completions path:src kind:fpath
+
+mattmc3/zephyr path:plugins/environment
+mattmc3/zephyr path:plugins/color
+mattmc3/zephyr path:plugins/compstyle
+mattmc3/zephyr path:plugins/completion
+mattmc3/zephyr path:plugins/editor
+mattmc3/zephyr path:plugins/history
+
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/fzf
+ohmyzsh/ohmyzsh path:plugins/zoxide
+
+hlissner/zsh-autopair
+MichaelAquilina/zsh-you-should-use
+
+# Must be loaded after compinit, but before plugins that wrap completion widgets.
+Aloxaf/fzf-tab
+
+ohmyzsh/ohmyzsh path:plugins/starship
+
+# Load these last.
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
