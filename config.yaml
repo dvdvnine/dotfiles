@@ -8,6 +8,22 @@ dotfiles:
     dst: ~/.config/git
     link: link_children
 
+  zsh:
+    src: zsh
+    dst: ~/.config/zsh
+    link: link_children
+    instignore:
+      - ".zshenv"
+    cmpignore:
+      - ".zshenv"
+    upignore:
+      - ".zshenv"
+
+  f_zshenv:
+    src: zsh/.zshenv
+    dst: ~/.zshenv
+    link: absolute
+
   fish:
     src: fish
     dst: ~/.config/fish
