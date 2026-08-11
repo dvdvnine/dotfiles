@@ -83,6 +83,11 @@ dotfiles:
     dst: ~/.local/bin/hypr-close-windows
     link: absolute
 
+  f_hypr_lock_screen:
+    src: bin/hypr-lock-screen
+    dst: ~/.local/bin/hypr-lock-screen
+    link: absolute
+
   f_hypr_session:
     src: bin/hyrp-session
     dst: ~/.local/bin/hypr-session
