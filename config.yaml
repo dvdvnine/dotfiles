@@ -134,6 +134,11 @@ dotfiles:
     dst: ~/.config/mako
     link: link_children
 
+  f_darkman:
+    src: bin/set-mode
+    dst: ~/.local/share/darkman/set-mode
+    link: absolute
+
   hypr:
     src: hypr
     dst: ~/.config/hypr
