@@ -18,7 +18,7 @@ padding = 6.0
 radius = 0.0
 
 [widget.workspaces]
-display = "none"
+show_labels = false
 
 pill_scale = 0.5
 active_pill_size = 4.0
@@ -32,14 +32,10 @@ capsule = true
 capsule_opacity = 0.0
 
 [widget.keyboard_layout]
-show_icon = false
+show_glyph = false
 
 capsule = true
 capsule_opacity = 0.0
-
-[widget.keyboard_layout.custom_labels]
-"English (US)" = "en"
-"Russian" = "ru"
 
 [widget.privacy]
 interactive = false
