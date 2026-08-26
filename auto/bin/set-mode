@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+#
+# ... w\ `QT_QPA_PLATFORMTHEME=gtk3`.
 
 set -euo pipefail
-
-# Recommended to have `QT_QPA_PLATFORMTHEME=gtk3`.
 
 main() {
   local color_scheme
