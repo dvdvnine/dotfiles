@@ -35,9 +35,8 @@ vim.o.pumheight = 10 -- limit popup menu height
 vim.o.pummaxwidth = 100 -- limit popup menu width
 vim.o.pumborder = "single" -- use border in popup menu
 
--- TODO: конфликтует с плагином прокрутки создавая артефакты и рывки.
--- vim.o.scrolloff = 8 -- vertical cursor padding
--- vim.o.sidescrolloff = 8 -- horizontal cursor padding
+vim.o.scrolloff = 8 -- vertical cursor padding
+vim.o.sidescrolloff = 8 -- horizontal cursor padding
 
 vim.o.splitkeep = "screen" -- keep same screen position when splitting windows
 vim.o.splitbelow = true -- horizontal splits will be below
