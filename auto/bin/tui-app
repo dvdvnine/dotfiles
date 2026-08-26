@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail
+#
+# Launch a TUI app through `xdg-terminal-exec`.
 
-# Launch a TUI app through UWSM with a predictable Wayland app-id.
+set -euo pipefail
 
 (( $# )) || {
   echo "Usage: ${0##*/} <command> [args...]" >&2
@@ -11,4 +12,4 @@ set -euo pipefail
 app="$1"
 shift
 
-exec uwsm-app -T "--app-id=local.${app}" -- "$app" "$@"
+exec xdg-terminal-exec "--app-id=local.${app}" -- "${app}" "$@"
