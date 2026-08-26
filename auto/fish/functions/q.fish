@@ -1,7 +1,8 @@
-# NOTE: depends on the profile settings in `~/.codex/fast.config.toml`.
-function ai --description "Run AI agent with the fast read-only profile"
+# Note: depends on the profile settings in `~/.codex/fast.config.toml`.
+
+function q --description "Run AI agent with the fast read-only profile"
     if test (count $argv) -eq 0
-        echo "Usage: ai <task>" >&2
+        echo "Usage: q <task>" >&2
         return 2
     end
 
@@ -14,15 +15,15 @@ function ai --description "Run AI agent with the fast read-only profile"
         -- \
         "$(string join ' ' -- $argv)" 2>| read -z diagnostics
 
-    set -l ai_status $pipestatus[1]
+    set -l q_status $pipestatus[1]
 
-    if test $ai_status -ne 0
+    if test $q_status -ne 0
         if test -n "$diagnostics"
             printf '%s' "$diagnostics" >&2
         else
-            echo "Failed with status $ai_status" >&2
+            echo "Failed with status $q_status" >&2
         end
     end
 
-    return $ai_status
+    return $q_status
 end
