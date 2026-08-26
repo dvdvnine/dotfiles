@@ -12,7 +12,7 @@ function ai --description "Run AI agent with the fast read-only profile"
         --skip-git-repo-check \
         --sandbox read-only \
         -- \
-        (string join ' ' -- $argv) 2>| read -z diagnostics
+        "$(string join ' ' -- $argv)" 2>| read -z diagnostics
 
     set -l ai_status $pipestatus[1]
 
