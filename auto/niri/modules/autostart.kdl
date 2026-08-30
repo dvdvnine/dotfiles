@@ -1,0 +1,23 @@
+hotkey-overlay { skip-at-startup; }
+
+spawn-sh-at-startup "noctalia"
+spawn-sh-at-startup "throne"
+spawn-sh-at-startup "Telegram"
+spawn-sh-at-startup "com.discordapp.Discord --start-minimized"
+spawn-sh-at-startup "brave"
+
+window-rule {
+    match app-id="org.telegram.desktop" at-startup=true
+
+    open-focused false
+}
+
+window-rule {
+    match app-id="brave-browser" at-startup=true
+
+    open-on-workspace "first"
+    open-focused true
+
+    // Take one of the values from `preset-column-widths`.
+    default-column-width { proportion 0.66667; }
+}

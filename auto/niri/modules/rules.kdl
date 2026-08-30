@@ -1,0 +1,129 @@
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    tiled-state true
+}
+
+window-rule {
+    match is-window-cast-target=true
+
+    shadow {
+        on
+        softness 20
+        spread 2
+        color "#c9b03e"
+    }
+}
+
+window-rule {
+    match app-id="KeePassXC"
+
+    block-out-from "screen-capture"
+}
+
+layer-rule {
+    match namespace="noctalia-notifications"
+
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    match app-id="org.qbittorrent.qBittorrent"
+    match app-id="org.nicotine_plus.Nicotine"
+    match app-id=".*[.]exe$"
+    match app-id="^steam_proton$"
+    exclude is-window-cast-target=true
+
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id="dev.noctalia.Noctalia$"
+    match app-id="^local[.]"
+    match app-id="^Throne$"
+    match app-id="org.gnome.NautilusPreviewer"
+    match app-id="org.gnome.FileRoller"
+    match app-id="org.qbittorrent.qBittorrent"
+    match app-id="org.nicotine_plus.Nicotine"
+    match app-id="KeePassXC"
+    match app-id="com.usebottles.bottles"
+    match app-id="org.telegram.desktop"
+    match app-id="discord"
+    match app-id="firefox" title="^Picture-in-Picture$"
+    match app-id="localsend"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+    match app-id="org.pulseaudio.pavucontrol"
+
+    open-floating true
+}
+
+window-rule {
+    match app-id="local.btop"
+    match app-id="local.yazi"
+    match app-id="dev.noctalia.Noctalia"
+    match app-id="org.pulseaudio.pavucontrol"
+
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 900; }
+}
+
+window-rule {
+    match app-id="^Throne$"
+    match app-id="org.gnome.FileRoller"
+    match app-id="org.qbittorrent.qBittorrent"
+    match app-id="org.nicotine_plus.Nicotine"
+    match app-id="KeePassXC"
+    match app-id="com.usebottles.bottles"
+    match app-id="localsend"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+
+    max-width 1280
+    max-height 900
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    match app-id="discord"
+
+    open-on-workspace "scratchpad"
+}
+
+window-rule {
+    match app-id="discord"
+
+    default-column-width { fixed 1030; }
+    default-window-height { proportion 0.7; }
+    default-floating-position x=24 y=0 relative-to="left"
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+
+    default-column-width { fixed 710; }
+    default-window-height { proportion 0.9; }
+    default-floating-position x=1070 y=0 relative-to="left"
+}
+
+window-rule {
+    match app-id=".*[.]exe$"
+    match app-id="^steam_proton$"
+
+    open-on-workspace "_"
+}
+
+window-rule {
+    match app-id="lunatranslator[.]exe" title="^LunaTranslator$"
+
+    focus-ring { off; }
+    default-floating-position x=0 y=0 relative-to="bottom"
+}
+
+// Todo: app update icon from the tray?
+window-rule {
+    match app-id="explorer[.]exe"
+
+    default-column-width { fixed 50; }
+    default-window-height { fixed 50; }
+    default-floating-position x=24 y=24 relative-to="bottom-right"
+}

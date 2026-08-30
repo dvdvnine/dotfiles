@@ -1,0 +1,98 @@
+workspace "_" {
+  layout {
+    default-column-width {}
+    struts { bottom 130; }
+  }
+}
+workspace "scratchpad"
+workspace "first"
+workspace "second"
+
+input {
+    mod-key "Super"
+
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:caps_toggle,compose:ralt"
+        }
+
+        track-layout "window"
+        repeat-delay 240
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+    workspace-auto-back-and-forth
+}
+
+cursor { hide-when-typing; }
+
+layout {
+    gaps 16
+
+    struts {
+        right 8
+        left 8
+        top 8
+        bottom 8
+    }
+
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.33333; }
+
+    focus-ring {
+        width 4
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        on
+        softness 20
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    tab-indicator{
+      gap 8
+      length total-proportion=0.3
+      active-color "#c9b03e"
+      inactive-color "#505050"
+      urgent-color "#9b0000"
+    }
+
+    insert-hint { off; }
+}
+
+blur {
+    off
+    passes 2
+    offset 3
+    noise 0.05
+    saturation 1.5
+}
+
+overview { backdrop-color "#000000"; }
+recent-windows { off; }
+
+screenshot-path null
+// screenshot-path "path/to/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
