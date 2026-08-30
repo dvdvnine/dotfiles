@@ -1,0 +1,48 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean:
+    ~/.local/bin/:
+    ~/.config/:
+      recursive: true
+
+- link:
+    ~/.ssh/config: auto/ssh/config
+
+    ~/.config/git/:
+      glob: true
+      path: auto/git/*
+
+    ~/.config/mise/config.toml: auto/mise/config.toml
+
+    ~/.config/fish/:
+      glob: true
+      path: auto/fish/*
+
+    ~/.config/starship.toml: auto/starship/starship.toml
+
+    ~/.config/ghostty/config: auto/ghostty/config
+
+    ~/.config/fontconfig/fonts.conf: auto/fontconfig/fonts.conf
+
+    ~/.local/bin/secure-sensitive: auto/bin/secure-sensitive
+    ~/.local/bin/set-mode: auto/bin/set-mode
+    ~/.local/bin/tui-app: auto/bin/tui-app
+
+    ~/.config/noctalia/:
+      glob: true
+      path: auto/noctalia/*
+
+    ~/.config/niri/:
+      glob: true
+      path: auto/niri/*
+
+- shell:
+    - command: echo
+      quiet: true
+      stdout: true
+
+    - [chmod 700 ~/.ssh, " 🛡️ Securing ~/.ssh"]
+    - [chmod 600 auto/ssh/config, " 🛡️ Securing SSH config"]
