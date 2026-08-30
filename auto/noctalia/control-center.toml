@@ -24,3 +24,6 @@ type = "notification"
 
 [[control_center.shortcuts]]
 type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
