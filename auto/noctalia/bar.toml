@@ -1,5 +1,5 @@
 [bar.default]
-start = ["workspaces"]
+start = []
 center = []
 end = ["tray", "keyboard_layout", "privacy", "group:g1"]
 
