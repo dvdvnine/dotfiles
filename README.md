@@ -42,3 +42,12 @@ Create symlinks for `Firefox`:
 ln -s ~/.dotfiles/manual/firefox/user.js ~/.configs/mozilla/firefox/<profile>/user.js
 ln -s ~/.dotfiles/manual/firefox/userChrome.css ~/.configs/mozilla/firefox/<profile>/chrome/userChrome.css
 ```
+
+---
+
+Inspired by:
+
+- https://anishathalye.com/managing-your-dotfiles
+- https://github.com/anishathalye/dotfiles
+- https://github.com/sobolevn/dotfiles
+- https://github.com/devpew/dotfiles
