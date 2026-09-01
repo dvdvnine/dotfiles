@@ -44,5 +44,13 @@
       quiet: true
       stdout: true
 
-    - [chmod 700 ~/.ssh, " 🛡️ Securing ~/.ssh"]
-    - [chmod 600 auto/ssh/config, " 🛡️ Securing SSH config"]
+    - [chmod 700 ~/.ssh, " 🛡️ Securing `~/.ssh`"]
+    - [chmod 600 ~/.ssh/config, " 🛡️ Securing SSH config"]
+
+    - [sudo systemctl enable ly@tty2.service, " 🖥️ Enabling 'Ly'"]
+    - [sudo systemctl disable getty@tty2.service, " 🖥️ Disabling 'getty' on TTY"]
+
+    - [sudo systemctl enable docker.socket, " 🐳 Enabling 'Docker' socket"]
+    - [sudo usermod -aG docker "$USER", " 🐳 Adding user to 'Docker' group"]
+
+    - [chsh -s /usr/bin/fish, " 🐟 Setting 'Fish' as default shell"]
