@@ -1,0 +1,82 @@
+standard = [
+  "terminus-font",
+  "ttf-nerd-fonts-symbols",
+
+  "git",
+  "jq",
+  "wget",
+  "yt-dlp",
+  "rsync",
+  "openssh",
+  "pv",
+
+  "hwinfo",
+  "ddcutil",
+  "ffmpeg",
+
+  "fish",
+  "starship",
+  "zoxide",
+  "fzf",
+  "bat",
+  "eza",
+  "fd",
+  "ripgrep",
+  "duf",
+  "tealdeer",
+  "fastfetch",
+  "btop",
+  "glances",
+  "neovim",
+  "tree-sitter-cli",
+
+  "mise",
+  "docker",
+
+  "gvfs-mtp",
+  "gvfs-smb",
+  "gvfs-wsdd",
+  "nautilus",
+  "sushi",
+  "loupe",
+  "papers",
+  "file-roller",
+  "ghostty-nautilus",
+
+  "niri",
+  "wl-clipboard",
+  "xwayland-satellite",
+  "xdg-desktop-portal-gtk",
+  "xdg-desktop-portal-gnome",
+  "gnome-keyring",
+  "noctalia",
+  "ly",
+  "adw-gtk-theme",
+
+  "ghostty",
+  "keepassxc",
+  "localsend",
+  "telegram-desktop",
+  "brave-bin",
+  "firefox",
+  "chatgpt-desktop-bin",
+  "mpv",
+  "obs-studio",
+  "qbittorrent",
+  "nicotine+",
+]
+
+aur = [
+  "dotbot",
+  "xdg-terminal-exec",
+  "throne-bin",
+  "quickemu",
+  "obs-pipewire-audio-capture",
+]
+
+flatpak = [
+  "com.discordapp.Discord",
+  "com.usebottles.bottles",
+  "org.gnome.gitlab.YaLTeR.VideoTrimmer",
+  "md.obsidian.Obsidian",
+]
