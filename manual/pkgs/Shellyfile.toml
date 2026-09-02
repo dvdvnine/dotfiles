@@ -2,7 +2,6 @@ standard = [
   "terminus-font",
   "ttf-nerd-fonts-symbols",
 
-  "git",
   "jq",
   "wget",
   "yt-dlp",
@@ -29,8 +28,6 @@ standard = [
   "glances",
   "neovim",
   "tree-sitter-cli",
-
-  "mise",
   "docker",
 
   "gvfs-mtp",
