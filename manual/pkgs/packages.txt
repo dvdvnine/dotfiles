@@ -29,8 +29,6 @@ repo btop
 repo glances
 repo neovim
 repo tree-sitter-cli
-
-repo mise
 repo docker
 
 repo gvfs-mtp
