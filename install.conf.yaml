@@ -21,6 +21,10 @@
       glob: true
       path: auto/fish/*
 
+    ~/.config/nvim/:
+      glob: true
+      path: auto/nvim/*
+
     ~/.config/starship.toml: auto/starship/starship.toml
 
     ~/.config/ghostty/config: auto/ghostty/config
