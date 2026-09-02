@@ -75,6 +75,8 @@ layout {
       urgent-color "#9b0000"
     }
 
+    background-color "#000000"
+
     insert-hint { off; }
 }
 
