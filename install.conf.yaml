@@ -51,6 +51,8 @@
     - [chmod 700 ~/.ssh, " 🛡️ Securing `~/.ssh`"]
     - [chmod 600 ~/.ssh/config, " 🛡️ Securing SSH config"]
 
+    - [systemctl --user enable gcr-ssh-agent.socket, " 🔑 Enabling SSH agent"]
+
     - [sudo systemctl enable ly@tty2.service, " 🖥️ Enabling 'Ly'"]
     - [sudo systemctl disable getty@tty2.service, " 🖥️ Disabling 'getty' on TTY"]
 
