@@ -28,7 +28,7 @@ Install packages:
 ```sh
 awk '$1=="repo"{print $2}' ~/.dotfiles/manual/pkgs/packages.txt | xargs -r sudo pacman -S --needed --noconfirm
 awk '$1=="aur"{print $2}' ~/.dotfiles/manual/pkgs/packages.txt | xargs -r paru -S --needed --noconfirm
-awk '$1=="flatpak"{print $2}' packages.txt | xargs -r flatpak install -y --noninteractive flathub
+awk '$1=="flatpak"{print $2}' ~/.dotfiles/manual/pkgs/packages.txt | xargs -r flatpak install -y --noninteractive flathub
 ```
 
 Install dev tools:
