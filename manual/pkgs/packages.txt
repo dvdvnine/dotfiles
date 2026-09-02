@@ -1,0 +1,77 @@
+# Note: CachyOS-specific packages.
+
+repo terminus-font
+repo ttf-nerd-fonts-symbols
+
+repo jq
+repo wget
+repo yt-dlp
+repo rsync
+repo openssh
+repo pv
+
+repo hwinfo
+repo ddcutil
+repo ffmpeg
+
+repo fish
+repo starship
+repo zoxide
+repo fzf
+repo bat
+repo eza
+repo fd
+repo ripgrep
+repo duf
+repo tealdeer
+repo fastfetch
+repo btop
+repo glances
+repo neovim
+repo tree-sitter-cli
+
+repo mise
+repo docker
+
+repo gvfs-mtp
+repo gvfs-smb
+repo gvfs-wsdd
+repo nautilus
+repo sushi
+repo loupe
+repo papers
+repo file-roller
+repo ghostty-nautilus
+
+repo niri
+repo wl-clipboard
+repo xwayland-satellite
+repo xdg-desktop-portal-gtk
+repo xdg-desktop-portal-gnome
+repo gnome-keyring
+repo noctalia
+repo ly
+repo adw-gtk-theme
+
+repo ghostty
+repo keepassxc
+repo localsend
+repo telegram-desktop
+repo brave-bin
+repo firefox
+repo chatgpt-desktop-bin
+repo mpv
+repo obs-studio
+repo qbittorrent
+repo nicotine+
+
+aur dotbot
+aur xdg-terminal-exec
+aur throne-bin
+aur quickemu
+aur obs-pipewire-audio-capture
+
+flatpak com.discordapp.Discord
+flatpak com.usebottles.bottles
+flatpak org.gnome.gitlab.YaLTeR.VideoTrimmer
+flatpak md.obsidian.Obsidian
