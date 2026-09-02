@@ -39,8 +39,8 @@ mise install
 Create symlinks for `Firefox`:
 
 ```sh
-ln -s ~/.dotfiles/manual/firefox/user.js ~/.configs/mozilla/firefox/<profile>/user.js
-ln -s ~/.dotfiles/manual/firefox/userChrome.css ~/.configs/mozilla/firefox/<profile>/chrome/userChrome.css
+ln -s ~/.dotfiles/manual/firefox/user.js ~/.config/mozilla/firefox/<profile>/user.js
+ln -s ~/.dotfiles/manual/firefox/userChrome.css ~/.config/mozilla/firefox/<profile>/chrome/userChrome.css
 ```
 
 ---
