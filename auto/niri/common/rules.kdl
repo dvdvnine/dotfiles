@@ -1,0 +1,57 @@
+window-rule {
+    match app-id="dev.noctalia.Noctalia$"
+    match app-id="^local[.]"
+    match app-id="org.gnome.NautilusPreviewer"
+    match app-id="org.gnome.FileRoller"
+    match app-id="^Throne$"
+    match app-id="KeePassXC"
+    match app-id="localsend"
+    match app-id="com.usebottles.bottles"
+    match app-id="org.qbittorrent.qBittorrent"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+    match app-id="firefox" title="^Picture-in-Picture$"
+
+    open-floating true
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    match app-id="discord"
+
+    open-on-workspace "scratchpad"
+}
+
+window-rule {
+    match app-id="discord"
+
+    default-column-width { fixed 1030; }
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+
+    default-column-width { fixed 710; }
+}
+
+window-rule {
+    match app-id=".*[.]exe$"
+    match app-id="^steam_proton$"
+
+    open-on-workspace "_"
+}
+
+window-rule {
+    match app-id="lunatranslator[.]exe" title="^LunaTranslator$"
+
+    focus-ring { off; }
+    default-floating-position x=0 y=0 relative-to="bottom"
+}
+
+// Todo: app update icon from the tray?
+window-rule {
+    match app-id="explorer[.]exe"
+
+    default-column-width { fixed 50; }
+    default-window-height { fixed 50; }
+    default-floating-position x=24 y=24 relative-to="bottom-right"
+}

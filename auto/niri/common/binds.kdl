@@ -29,6 +29,7 @@ binds {
 
     Mod+W repeat=false { close-window; }
     Mod+F { fullscreen-window; }
+    Mod+Ctrl+F { maximize-column; }
     Mod+T { toggle-window-floating; }
     Mod+C { center-column; }
     Mod+O { toggle-overview; }

@@ -1,0 +1,44 @@
+output "DP-1" {
+    layout {
+        preset-column-widths {
+            proportion 0.33333
+            proportion 0.66667
+        }
+
+        default-column-width { proportion 0.33333; }
+    }
+}
+
+window-rule {
+    match app-id="brave-browser" at-startup=true
+
+    open-on-workspace "first"
+    open-focused true
+
+    // Take one of the values from `preset-column-widths`.
+    default-column-width { proportion 0.66667; }
+}
+
+// Don't remember their size.
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    match app-id="local.btop"
+    match app-id="localsend"
+    match app-id="org.gnome.FileRoller"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+
+    default-column-width { fixed 1152; }
+    default-window-height { fixed 720; }
+}
+
+// Remember their size and spawn modal windows.
+window-rule {
+    match app-id="com.usebottles.bottles"
+    match app-id="org.qbittorrent.qBittorrent"
+    match app-id="org.nicotine_plus.Nicotine"
+    match app-id="KeePassXC"
+    match app-id="^Throne$"
+
+    max-width 1152
+    max-height 720
+}

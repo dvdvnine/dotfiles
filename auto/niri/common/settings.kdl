@@ -1,7 +1,7 @@
 workspace "_" {
   layout {
-    default-column-width {}
-    struts { bottom 130; }
+      default-column-width {};
+      struts { bottom 160; }
   }
 }
 workspace "scratchpad"
@@ -30,7 +30,10 @@ input {
     workspace-auto-back-and-forth
 }
 
-cursor { hide-when-typing; }
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
 
 layout {
     gaps 16
@@ -44,13 +47,6 @@ layout {
 
     center-focused-column "never"
     always-center-single-column
-
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.66667
-    }
-
-    default-column-width { proportion 0.33333; }
 
     focus-ring {
         width 4
@@ -76,7 +72,6 @@ layout {
     }
 
     background-color "#000000"
-
     insert-hint { off; }
 }
 
@@ -89,12 +84,16 @@ blur {
 }
 
 overview { backdrop-color "#000000"; }
+
 recent-windows { off; }
 
-screenshot-path null
-// screenshot-path "path/to/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// Allows notification actions and window activation from Noctalia.
+debug { honor-xdg-activation-with-invalid-serial; }
 
-debug {
-    // Allows notification actions and window activation from Noctalia.
-    honor-xdg-activation-with-invalid-serial
+screenshot-path null
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    tiled-state true
 }
