@@ -37,6 +37,9 @@ Install dev tools:
 mise install
 ```
 
+> [!NOTE]
+> Some configs are host-specific and depend on hostname.
+
 Link dotfiles:
 
 ```sh
