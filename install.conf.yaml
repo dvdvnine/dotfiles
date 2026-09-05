@@ -42,6 +42,14 @@
     ~/.config/niri/:
       glob: true
       path: auto/niri/*
+      exclude:
+        - auto/niri/profiles
+    ~/.config/niri/profiles/desktop.kdl:
+      if: '[ "$(hostname)" = "desktop" ]'
+      path: auto/niri/profiles/desktop.kdl
+    ~/.config/niri/profiles/laptop.kdl:
+      if: '[ "$(hostname)" = "laptop" ]'
+      path: auto/niri/profiles/laptop.kdl
 
 - shell:
     - command: echo
