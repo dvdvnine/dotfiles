@@ -1,10 +1,10 @@
 # dotfiles
 
-Built with:
+Uses:
 
-- config management with [`Dotbot`](https://github.com/andresharpe/dotbot);
+- dotfile management with [`Dotbot`](https://github.com/andresharpe/dotbot);
 - ~~package management with [`Shelly`](https://github.com/Seafoam-Labs/Shelly-ALPM)~~ (sucks for now);
-- dev tooling and environment management with [`mise`](https://github.com/jdx/mise).
+- dev tooling with [`mise`](https://github.com/jdx/mise).
 
 ## Deploy
 
@@ -17,7 +17,7 @@ Clone the repo:
 git clone https://github.com/dvdvnine/dotfiles ~/.dotfiles
 ```
 
-Install managers:
+Install dependencies:
 
 ```sh
 sudo pacman -S --needed --noconfirm flatpak paru mise
@@ -38,7 +38,7 @@ mise install
 ```
 
 > [!NOTE]
-> Some configs are host-specific and depend on hostname.
+> Some configs are host-specific and depend on the current `hostname`.
 
 Link dotfiles:
 
@@ -46,7 +46,7 @@ Link dotfiles:
 dotbot -c ~/.dotfiles/install.conf.yaml
 ```
 
-Create symlinks for `Firefox`:
+Create `Firefox` symlinks manually:
 
 ```sh
 ln -s ~/.dotfiles/manual/firefox/user.js ~/.config/mozilla/firefox/<profile>/user.js
